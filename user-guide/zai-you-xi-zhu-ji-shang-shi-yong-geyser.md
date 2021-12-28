@@ -2,8 +2,6 @@
 
 所有的游戏主机版本客户端都可以加入第三方服务器 - 包括 Geyser 的服务器。像 **Xbox One，Nintendo Switch 和 PS4** 系统的玩家可以通过一个名为 BedrockConnect 的第三方软件进入第三方服务器。要获取该项目的技术信息或者如何搭建该软件，请查看 [他们的 GitHub 页面](https://github.com/Pugmatt/BedrockConnect) (_这个项目不隶属于 GeyserMC_)。没有其他替代的方法。
 
-**注意：The main IP used for BedrockConnect is often blocked on consoles, if you run into issues with internet connection or joining servers after changing your DNS, consider using either one of the other BedrockConnect servers on the** [**BedrockConnect Github Page**](https://github.com/Pugmatt/BedrockConnect)**, or the** [**Public GeyserConnect**](https://www.geyserconnect.net) **which allows connecting to both Java and Bedrock servers.**
-
 ## Xbox One
 
 (请参考下面的视频)
@@ -18,36 +16,27 @@
 
 ## PlayStation 4
 
-1. 前往你的 PS4 主页。
-2. 前往设置。
-3. 前往网络。
-4. 选择你的网络，并连接。
-5. If you are using wired internet, select "Use LAN Cable", otherwise choose "Use Wi-Fi".
-6. Select the Custom network creation mode.
-7. Select Automatic IP Address.
-8. For DHCP Host Name, make sure you select Do Not Specify.
-9. Under DNS Settings, select Manual.
-10. Enter the BedrockConnect IP for the preferred Primary DNS (Multiple options depending on region can be found on the [BedrockConnect Github Page](https://github.com/Pugmatt/BedrockConnect)) and something like Google or Cloudfare's IP for the Secondary DNS (8.8.8.8 or 1.1.1.1).
+(请见原Wiki)
 
-### Alternative Methods
+### 可替代办法
 
-If you'd rather try emulating a LAN game on your network on another device, here's how you'd do that.
+如果您更愿意尝试在另一台设备上的网络上模拟 LAN 连接，请按照以下方法进行操作。
 
-_Note that this method will not work with the Nintendo Switch._
+_请注意这个办法不适用于 Nintendo Switch。_
 
-#### Using a PC
+#### 使用PC
 
-If you have a PC, you can use [Phantom](https://github.com/jhead/phantom).
+如果你拥有一个 PC，那么你可以使用 [Phantom](https://github.com/jhead/phantom)。
 
-#### Using an Android Device
+#### 使用一个安卓设备
 
-If you have an Android device, you have several options:
+如果你拥有一个安卓设备，那么你有很多选择：
 
-* [~~Geyser Android app~~](https://github.com/GeyserMC/GeyserAndroid) (Currently out of date)
+* [~~Geyser Android app~~](https://github.com/GeyserMC/GeyserAndroid) (已过时)
 * [MC Lan Proxy (Trial)](https://discord.com/channels/613163671870242838/613194762249437245/770699493482037310)
 * [MC Lan Proxy (Paid)](https://play.google.com/store/apps/details?id=com.luzenna.mineproxydroid)
 * [MC Server Connector](https://play.google.com/store/apps/details?id=com.smokiem.mcserverconnector)
 
-#### Using an iOS device
+#### 使用一个 iOS 设备
 
-If you have an iOS 14+ device, you can use [BedrockTogether](https://apps.apple.com/app/bedrocktogether/id1534593376).
+如果你拥有一个 iOS 14+ 设备，那么你可以使用 [BedrockTogether](https://apps.apple.com/app/bedrocktogether/id1534593376)。

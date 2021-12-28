@@ -79,12 +79,12 @@ curl https://gist.githubusercontent.com/rtm516/e3e07d6595ee41e05a38b03c0f4d7a80/
 
 1. 安装 [Filza File Manager](http://cydia.saurik.com/package/com.tigisoftware.filza/)
 2. 安装 [NewTerm 2](https://chariz.com/get/newterm)
-3. 下载 jre-16 iOS 版 Filza 并通过 [这里](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb)的 Filza 进行安装
-4. Download my modified java commands, and install it using Filza [here](https://cdn.discordapp.com/attachments/558829512633090048/834014323755319306/com.letschill.java\_0.1\_iphoneos-arm.deb).
-5. Open NewTerm 2 and run `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`.
+3. 下载 [这里](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb) 的 **jre-16 iOS** 版并通过 Filza 进行安装
+4. 下载 [这里](https://cdn.discordapp.com/attachments/558829512633090048/834014323755319306/com.letschill.java\_0.1\_iphoneos-arm.deb) 的 修改后的 java 指令集并通过 Filza 进行安装
+5. 打开 NewTerm 2 并运行 `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`.
 6. 运行 `java -jar Geyser.jar`.
 7. 你现在可以在基岩版使用 Geyser 了！
 
-**Note:** Due to iOS's environment, if your device has low specs, iOS might end up killing NewTerm 2 while you're playing, stopping the server. There is no fix for that because of how iOS works.
+**注意:** 由于 iOS 的环境，如果您的设备性能不足，iOS 可能会在您玩游戏时杀死 NewTerm 2 的进程。
 
-你或许遇到了一些错误。 If you do, run `su` then enter the root password (default is `alpine`) for root access. Then, run the server like you normally would, and it should work just fine.
+你或许遇到了一些错误。如果是的话，运行 `su` 然后输入 root 密码 (默认是 `alpine`) 以获得 root 权限。再跟正常一样开启服务器，你有可能发现正常了。
