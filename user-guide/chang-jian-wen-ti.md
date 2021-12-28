@@ -66,23 +66,23 @@
 
 ### 在使用 Floodgate 时，执行指令的玩家变量是什么？
 
-If there is a prefix on Floodgate players, you must include the prefix in the name. Floodgate also replaces all spaces in names with underscores, so be sure to replace any spaces with underscores when executing the command. If this does not work, put double quotes around the name.
-
-Example: `/tp ".<bedrock_username>"`
-
-### How do I add players to the whitelist when using Floodgate?
-
-There are three ways you can do this. The first way is to use Floodgate's built-in whitelist command, `/fwhitelist add .<bedrock_username>`. The second way is to turn off the whitelist using `/whitelist off`, then get the Geyser player to join, then run `/whitelist add ".<bedrock_username>"`, then turn the whitelist back on using `/whitelist on`. (If using this method for a Bedrock account linked to an existing, whitelisted Java account, there is no need to _also_ whitelist the Bedrock account; you may link the accounts then immediately turn the whitelist back on.) The second way is to add the player's UUID as given by Floodgate to the whitelist.json file and then run `/whitelist reload`.
-
-### How do I find a player's UUID without them joining when using Floodgate?
-
-Use [this page.](https://floodgate-uuid.heathmitchell1.repl.co) If this doesn't work, then try this method:\
+如果基岩玩家有前缀，所有指令的指定 **必须** 在名称中 **包含该前缀** 。Floodgate 还将名称中的所有 **空格** 替换为 **下划线** ，因此在执行命令时请务必将所有空格替换为下划线。 如果这不起作用，请在名称周围加上双引号。\
 \
-First, you'll need to get the XUID of the player. There are several third-party websites to find this, for example, [this one](https://cxkes.me/xbox/xuid) (unaffiliated with Geyser). Make sure to choose "Hexidecimal." You'll need to enter the player's Xbox Gamertag, and, once submitted, it should display the XUID in the format of `xxxxxxxxxxxxxxxx`. To turn the XUID into a UUID that Java Edition can recognize, you need to put the XUID in this format: `00000000-0000-0000-xxxx-xxxxxxxxxxxx`. If formatted right, Java Edition should accept it as a UUID.
+示例: /tp ".<基岩版玩家>"。
 
-### Can I remove the prefix of Floodgate players?
+## 在使用 Floodgate 时，我该如何添加基岩玩家到白名单内？
 
-While you can remove the prefix, it is generally recommended not to remove the prefix to prevent situations where player usernames are the same on both editions (Ex: Bedrock Username: `JohnDoe`, Java Username: `JohnDoe`). While they have different UUIDs, they have the same username, which may cause conflicts with commands that involve a player name. If you want to remove the prefix to use commands, Try adding quotation marks around the name. Example: `/tp ".<bedrock_username>"` Otherwise, the prefix is located in the Floodgate `config.yml` under `username-prefix:`.
+您可以通过三种方式执行此操作。 第一种方法是使用 Floodgate 的内置白名单命令，`/fwhitelist add .<基岩版玩家>`。 第二种方法是使用 /whitelist off 关闭白名单，然后让基岩版玩家加入，然后运行 `/whitelist add ".<基岩版>"`，然后使用 `/whitelist on` 打开白名单。 ( 如果将这种方法用于关联到现有的、已列入白名单的 Java 帐户的基岩帐户，则无需将基岩帐户也列入白名单；您可以关联帐户然后立即重新打开白名单 ) 第三种方法是添加基岩玩家的 UUID ( 由 Floodgate 提供 ) 添加到 whitelist.json 文件，然后运行 `/whitelist reload`。
+
+## 在使用 Floodgate 时，该如何找到从未加入的基岩玩家的 UUID ?​&#x20;
+
+请尝试使用 [此页面](https://floodgate-uuid.heathmitchell1.repl.co)，如果这不起作用，请尝试此方法：
+
+首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。 如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
+
+## 在使用 Floodgate 时，我能删除基岩玩家的前缀吗?​&#x20;
+
+虽然您可以删除前缀，但通常建议 **不要删除** 前缀，以防止出现两个版本中玩家用户名相同的情况（例如：基岩用户名：`DJelly4K`，Java 用户名：`DJelly4K`）。 虽然它们具有不同的 UUID，但它们具有相同的用户名，这可能会导致与涉及玩家名称的命令发生 **冲突** 。 如果要删除前缀以使用命令，请尝试在名称周围添加引号。 示例：/tp ".<基岩版玩家>" 否则，前缀位于 Floodgate 的 **config.yml** 配置文件中的 `username-prefix:` 下。
 
 ### 要使用 Geyser 就必须安装 Floodgate 吗？
 
