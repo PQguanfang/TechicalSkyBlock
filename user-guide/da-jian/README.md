@@ -60,7 +60,7 @@
 
 在此之前，请确保你已阅读过 [这里](./#du-li-ban-de-da-jian)。
 
-1. 下载并安装 [Termuerm](https://termux.com)
+1. 下载并安装 [Termux](https://termux.com)
 2. 运行 `pkg install openjdk-17`
 3. 运行 `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`
 4. 执行 `java -jar Geyser.jar`
@@ -77,14 +77,14 @@ curl https://gist.githubusercontent.com/rtm516/e3e07d6595ee41e05a38b03c0f4d7a80/
 
 **注意:** 你需要事先进行越狱。
 
-1. 安装 [Filza File Manager](http://cydia.saurik.com/package/com.tigisoftware.filza/).
-2. 安装 [NewTerm 2](https://chariz.com/get/newterm).
-3. 下载 jre-16 iOS 版 Filza 并通过 [这里 ](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb)
+1. 安装 [Filza File Manager](http://cydia.saurik.com/package/com.tigisoftware.filza/)
+2. 安装 [NewTerm 2](https://chariz.com/get/newterm)
+3. 下载 jre-16 iOS 版 Filza 并通过 [这里](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb)的 Filza 进行安装
 4. Download my modified java commands, and install it using Filza [here](https://cdn.discordapp.com/attachments/558829512633090048/834014323755319306/com.letschill.java\_0.1\_iphoneos-arm.deb).
 5. Open NewTerm 2 and run `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`.
-6. Run `java -jar Geyser.jar`.
-7. You can find Geyser server running in MCPE!
+6. 运行 `java -jar Geyser.jar`.
+7. 你现在可以在基岩版使用 Geyser 了！
 
 **Note:** Due to iOS's environment, if your device has low specs, iOS might end up killing NewTerm 2 while you're playing, stopping the server. There is no fix for that because of how iOS works.
 
-You may encounter some issues. If you do, run `su` then enter the root password (default is `alpine`) for root access. Then, run the server like you normally would, and it should work just fine.
+你或许遇到了一些错误。 If you do, run `su` then enter the root password (default is `alpine`) for root access. Then, run the server like you normally would, and it should work just fine.
