@@ -70,17 +70,17 @@
 \
 示例: /tp ".<基岩版玩家>"。
 
-## 在使用 Floodgate 时，我该如何添加基岩玩家到白名单内？
+### 在使用 Floodgate 时，我该如何添加基岩玩家到白名单内？
 
 您可以通过三种方式执行此操作。 第一种方法是使用 Floodgate 的内置白名单命令，`/fwhitelist add .<基岩版玩家>`。 第二种方法是使用 /whitelist off 关闭白名单，然后让基岩版玩家加入，然后运行 `/whitelist add ".<基岩版>"`，然后使用 `/whitelist on` 打开白名单。 ( 如果将这种方法用于关联到现有的、已列入白名单的 Java 帐户的基岩帐户，则无需将基岩帐户也列入白名单；您可以关联帐户然后立即重新打开白名单 ) 第三种方法是添加基岩玩家的 UUID ( 由 Floodgate 提供 ) 添加到 whitelist.json 文件，然后运行 `/whitelist reload`。
 
-## 在使用 Floodgate 时，该如何找到从未加入的基岩玩家的 UUID ?​&#x20;
+### 在使用 Floodgate 时，该如何找到从未加入的基岩玩家的 UUID ?​&#x20;
 
 请尝试使用 [此页面](https://floodgate-uuid.heathmitchell1.repl.co)，如果这不起作用，请尝试此方法：
 
 首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。 如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
 
-## 在使用 Floodgate 时，我能删除基岩玩家的前缀吗?​&#x20;
+### 在使用 Floodgate 时，我能删除基岩玩家的前缀吗?​&#x20;
 
 虽然您可以删除前缀，但通常建议 **不要删除** 前缀，以防止出现两个版本中玩家用户名相同的情况（例如：基岩用户名：`DJelly4K`，Java 用户名：`DJelly4K`）。 虽然它们具有不同的 UUID，但它们具有相同的用户名，这可能会导致与涉及玩家名称的命令发生 **冲突** 。 如果要删除前缀以使用命令，请尝试在名称周围添加引号。 示例：/tp ".<基岩版玩家>" 否则，前缀位于 Floodgate 的 **config.yml** 配置文件中的 `username-prefix:` 下。
 
