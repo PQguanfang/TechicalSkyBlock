@@ -43,7 +43,7 @@
 
 通用选项一般适用于 **Geyser** 本身的修改。
 
-**`floodgate-key-file`**: **Floodgate** 生成的 k**ey** 文件的路径。你必须安装 [Floodgate](https://github.com/GeyserMC/Floodgate/wiki/) 且 `auth-type` 选项设置成  `floodgate`。
+**`floodgate-key-file`**: **Floodgate** 生成的 **key** 文件的路径。你必须安装 [Floodgate](https://github.com/GeyserMC/Floodgate/wiki/) 且 `auth-type` 选项设置成  `floodgate`，否则该选项没有意义。
 
 **`userAuths`**: 一个放置你自己的 **Minecraft:Java版** 正版账号的选项，这样你每次登录 **Geyser** 服务器将会自动进入服务器，不需要输入你的正版账号信息。 **我只建议你在个人使用 Geyser 时配置此选项，我想没人会愿意把自己的正版账号共享给其他人使用。**
 
@@ -69,7 +69,7 @@ userAuths:
 
 **`legacy-ping-passthrough`**: 如果启用，则通过模拟 **Minecraft** 客户端而不是使用服务器的 **API** 手动 **ping** 服务器。**你应当 **_**只在你**_** 的MOTD人数不正确情况下再考虑开启此选项。**由于这个选项开启通常会在 **BungeeCord** 等上出现问题。此选项在独立版无效。
 
-**`ping-passthrough-interval`**: 虚拟的 Minecraft 客户端应该尝试 ping 远Java版服务器以更新信息的频率，**以秒为单位**（设置为 **1** 将每秒 ping 一次服务器；设置为 **3** 将每三秒 ping 一次服务器）。 仅与独立和传统 ping 直通相关。 如果您遇到超时或 BrokenPipe 错误，请增加该数字。
+**`ping-passthrough-interval`**: 接上一个选项，虚拟的 Minecraft 客户端应该尝试 ping 远Java版服务器以更新信息的频率，**以秒为单位**（设置为 **1** 将每秒 ping 一次服务器；设置为 **3** 将每三秒 ping 一次服务器）。 仅与独立和传统 ping 直通相关。 如果您遇到超时或 BrokenPipe 错误，请增加该数字。
 
 **`max-players`**: 在 ping Geyser服务器时显示的最多玩家数量。这个选项实际上不是真的去限制玩家上限。当服务器玩家满员时，人数上限也会跟着提升，而基岩版客户端本身在检测到服务器满员时会直接不尝试连接到服务器。
 
@@ -87,9 +87,9 @@ userAuths:
 
 **`emote-offhand-workaround`**: 从 **Java 版 1.9** 开始，客户端可以使用所设置的按键 **在主手和副手中切换物品**（默认是 F）。基岩版没有这个功能，所以这个选项弥补了它。如果设置，当基岩版玩家使用任意表情时，他就会交换副手和主手物品，就像Java版的一样。 这里可以填写为三个值：
 
-* `disabled` - 默认值，不使用此解决方案
+* `disabled` - 默认值，不使用此解决方案。
 * `no-emotes` - 表情将不会发送给其他基岩版玩家，同时进行主手和副手的切换物品。这也代表表情功能在 Geyser服务器 中关闭。
-* `emotes-and-offhand` - 表情发送给其他基岩版玩家同时也会进行主手和副手切换物品
+* `emotes-and-offhand` - 表情发送给其他基岩版玩家同时也会进行主手和副手切换物品。
 
 **`default-locale`**: 如果无法查找玩家的语言，那么 **Geyse**r 给玩家设置的语言。[点击这里](chang-jian-wen-ti.md) 以查看你的语言的代码。
 
@@ -103,7 +103,7 @@ userAuths:
 
 **`force-resource-packs`**: 如果 Geyser 加载了资源包，那么将强制玩家使用改资源包。如果设置为 **false**，那么玩家可以拒绝该资源包并断开与服务器的连接。
 
-**`xbox-achievements-enabled`**: 是否在玩家游戏时解锁 Xbox 成就。这将导致你的服务器的指定指令无法使用，因为”作弊“选项将会被关闭。**该如果开启，像 /gamemode 和 /give 这样的指令在基岩版将无法使用。**
+**`xbox-achievements-enabled`**: 是否在玩家游戏时解锁 Xbox 成就。这将导致你的服务器的指定指令无法使用，因为”作弊“选项将会被关闭。**如果开启，像 /gamemode 和 /give 这样的指令在基岩版将无法使用。**
 
 ### 高级选项
 
@@ -113,7 +113,7 @@ userAuths:
 
 **`mtu`**: [https://en.wikipedia.org/wiki/Maximum\_transmission\_unit](https://en.wikipedia.org/wiki/Maximum\_transmission\_unit) - ~~互联网支持的最大 MTU 为 1492，但可能会导致数据包碎片问题。~~ 1400 是默认值。
 
-**`use-direct-connection`**: 是否直接连接到 **Java** 服务器而不创建 **TCP** 连接。只有当某个插件的数据包或网络无法与 **Geyser** 正常工作时，才应关闭此功能。 如果在插件版本上启用，Java版服务器地址和端口部分将被忽略。 如果在插件版本上禁用，将会导致性能会下降，延迟会增加。
+**`use-direct-connection`**: 是否直接连接到 **Java** 服务器而不建立 **TCP** 连接。只有当某个插件的数据包或网络无法与 **Geyser** 正常工作时，才应考虑关闭此功能。 如果在插件版本上启用，**Geyser** 配置下的Java版服务器地址和端口部分将被忽略。 如果在插件版本上禁用，将有可能导致性能会下降，延迟会增加。
 
 默认 Geyser 配置：
 
