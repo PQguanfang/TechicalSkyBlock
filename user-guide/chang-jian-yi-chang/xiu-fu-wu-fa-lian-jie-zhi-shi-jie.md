@@ -28,7 +28,7 @@ _无法连接至世界_ 是许多人在使用 Geyser 时遇到的共同问题，
 
 ### 确保你使用正确的 IP 连接
 
-You should be connecting with the Java server IP and the Bedrock port. If you port forwarded 19132, for example, you should specify port 19132 when connecting from Bedrock.
+您应该连接到 Java 服务器 IP 和基岩端口。 例如，如果您转发了 19132 端口，则在从基岩版连接时应指定端口 19132。
 
 ### 我正在使用一个云主机 或者 VPS！
 
@@ -36,73 +36,53 @@ You should be connecting with the Java server IP and the Bedrock port. If you po
 
 ### 端口转发
 
-Your server does need to be port forwarded. Generally, you can follow any Minecraft: Java Edition port forwarding guide; however, you need to replace any mention of TCP with UDP and, by default, any mention of 25565 with 19132.
+您的服务器确实需要进行端口转发。 通常，您可以使用 Minecraft Java版的端口转发指南；但是，您需要将其中的 TCP 替换为 UDP，并且默认情况下，将提及的 25565 替换为 19132。
 
-### Using TCP in DNS options/port forwarding Instead of UDP
+### 在 DNS 选项/端口转发中使用 TCP 而不是 UDP
 
-Minecraft: Java Edition uses TCP for connecting; Minecraft: Bedrock Edition uses UDP. Port forwarding your Bedrock Edition port with only TCP will not work, it has to be UDP. Forwarding your Bedrock Edition port with `TCP/UDP` (both protocols) should also work but is not recommended unless Java Edition and Bedrock Edition is sharing the same port.
+Minecraft Java版使用 TCP 进行连接； Minecraft 基岩版使用 UDP。 仅使用 TCP 转发您的基岩版端口将不起作用，它必须是 UDP。 使用`TCP/UDP`（两种协议）转发你的基岩版端口也应该有效，但不推荐使用，除非 Java 版和基岩版共享同一个端口。
 
-### Bedrock port is less than 10000
+### 基岩版端口小于 10000
 
-Historically, having a Bedrock port that is a lower number will cause issues. Setting it to 10000 or above seems safe.
+从历史上看，拥有一个较低的基岩端口会导致问题。 将其设置为 10000 或更高似乎是安全的。
 
-### Bedrock players can connect _after_ hitting the server on a TCP port (e.g. on Java or a website on the same server), OR only people who also play on Java Edition can join from Geyser
+### 基岩玩家可以在点击TCP端口上的服务器_后_连接（例如，在同一服务器上的Java或网站上），或者只有同时在Java版上玩游戏的人才能从 Geyser 加入
 
-This is likely a firewall issue on your server. Try the following workaround:
+这可能是您服务器上的防火墙问题。 尝试以下解决方法：
 
-Attempt to connect to the Bedrock IP and port through a web browser - for example, `http://test.geysermc.org:19132`. It won't work, but then try connecting through Bedrock, and it should work.
+尝试通过网络浏览器连接到基岩 IP 和端口 - 例如，`http://test.geysermc.org:19132`。 它不起作用，但尝试通过基岩连接，它应该可以工作。
 
-Specific host fixes:
+### 更改配置文件 'bedrock' 项的 'address'
 
-SoYouStart (a subsidiary of OVH):
+除了少数特定的服务提供商的配置，您通常不需要更改 Geyser 配置的这一部分。 但是，在极少数情况下，它确实可以解决问题
 
-In the SoYouStart control panel:
+## 服务提供商
 
-1. Click the IP tab.
-2. Click the gear at the right of the public IP address; select "Game mitigation".
-3. Pick "Add a rule".
-4. Select "minecraftPocketEdition" in the dropdown list and enter the target UDP ports.
-5. Save and wait a few seconds for the changes to come into effect.
+### 翼龙面板
 
-### Issues connecting with OVH or a subsidiary
+如果您在使用翼龙面板时遇到此错误，请尝试编辑 Geyser 配置并将端口更改为除“19132”之外的其他内容（例如“25566”）。
 
-If you're running into issues with some Bedrock players being unable to connect on OVH, navigate through the following settings:
+### 在同一网络上的另一台计算机上使用 Geyser
 
-* Navigate to `Network interfaces`
-* Click on the `...` button on the table for your IP -> then `...` and `Configure the GAME firewall` -> `Add rule` -> `Other protocol` (or `minecraftPocketEdition` if available)
-* Add your Geyser port into `outgoing port`
+#### 只能在主机上连接，不能以其他任何方式连接
 
-### Changing the `bedrock` `address` in the Geyser config.
+您的防火墙很可能会屏蔽了端口。 尝试在其中添加基岩端口，或出于测试目的禁用防火墙。
 
-Except for a few specific hosting providers, you generally do not need to change this part of the Geyser config. However, in rare instances, it does fix issues
-
-## Using a hosting provider or other location
-
-### Pterodactyl
-
-If you get this error while using the Pterodactyl Panel, try editing the Geyser config and changing the port to something besides `19132` (e.g. `25566`).
-
-### Hosting Geyser on another computer on the same network
-
-#### Can only connect from the same computer and not anywhere else
-
-Your firewall is likely in the way. Try adding an exception to Java, or disable the firewall for testing purposes.
-
-## Using Geyser on the same computer
+## 在同一台电脑上使用 Geyser
 
 ### Windows 10
 
-_This only affects people trying to join Geyser from Windows 10 Edition with Geyser hosted on the same computer._
+_这只会影响尝试从 Windows 10 版加入 Geyser 且 Geyser 设置在同一台计算机上的人。_
 
-This is an issue caused by Loopback restrictions not being lifted. By default, Microsoft Apps have this restriction on all their apps for local connections. Geyser will attempt to resolve this automatically; however, if you're still having connection problems, you can lift it by typing the following in Windows PowerShell in administrator mode: (it should return `OK.` if it worked)
+这是由未解除环回限制(Loopback restrictions)引起的问题。 默认情况下，微软应用对其所有本地连接的应用程序都有此限制。 Geyser 将尝试自动解决此问题； 但是，如果您仍然遇到连接问题，您可以通过在管理员模式下在 Windows PowerShell 中键入以下内容来解除它：（如果工作正常，它应该返回“OK.”）
 
 ```
 CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftUWP_8wekyb3d8bbwe"
 ```
 
-Should this not work, you can try this set of steps:
+如果这不起作用，您可以尝试以下步骤：
 
-1. Hold down Windows Key + R
-2. In the prompt, type `hdwwiz.exe`, then press Enter then Next
-3. Install the Hardware Manually
-4. Choose Network Adapter > Next > Microsoft > "Microsoft KM-TEST Loopback Adapter" then hit Next until it's done.
+1. 按住Windows键+ R
+2. 在提示中输入`hdwwiz.exe`，然后回车然后下一步
+3. 手动安装硬件
+4. 选择 网络适配器 > 下一步 > 左边选择 "Microsoft" > 右边选择 "Microsoft KM-TEST 环回适配器" 然后点击 下一步 直到完成。
