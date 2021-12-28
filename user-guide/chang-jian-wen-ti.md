@@ -16,7 +16,7 @@
 
 **Geyser** 应当和大部分 **服务端插件** 兼容，但总有例外，例如：
 
-* [TCPShield](https://tcpshield.com) 如果你没有购买付费计划，需要关闭 `only-allow-proxy-connections` 选项。然而，如果你购买了付费计划，则无需担心，因为他们的付费计划有对 **Geyse**r 添加额外支持。
+* [TCPShield](https://tcpshield.com) 如果你没有购买付费计划，需要关闭该插件的 `only-allow-proxy-connections` 选项。然而，如果你购买了付费计划，则无需担心，因为他们的付费计划有对 **Geyse**r 添加额外支持。
 
 **Floodgate** 与修改登录流程的插件不兼容。_请务必注意以下各个支持离线登录的插件只是为了 Wiki 编写，Geyser 官方不对离线服务器提供帮助支持。_
 
@@ -54,7 +54,7 @@
 
 ### 我应该给基岩版玩家什么 IP？
 
-总的来一般来说，如果你没有自己修改过，那么你的基岩版玩家连接你的服务器的IP应该和你的 **Java版玩家** 一样。至于端口，则根据你的 Geyser 配置下的 `bedrock` 下的 `port` 来决定。
+一般来说，如果你没有自己修改过，那么你的基岩版玩家连接你的服务器的IP应该和你的 **Java版玩家** 一样。至于端口，则根据你的 Geyser 配置下的 `bedrock` 下的 `port` 选项来决定。
 
 ### 我如何让基岩版玩家加载资源包？
 
@@ -78,7 +78,7 @@
 
 请尝试使用 [此页面](https://floodgate-uuid.heathmitchell1.repl.co)，如果这不起作用，请尝试此方法：
 
-首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。 如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
+首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
 
 ### 在使用 Floodgate 时，我能删除基岩玩家的前缀吗?​&#x20;
 
@@ -90,7 +90,7 @@
 
 ### 有时，世界跑的很远以后客户端会很卡.
 
-这是 基岩版 客户端的问题。具体请 [点击](https://minecraft.fandom.com/zh/wiki/%E5%9F%BA%E5%B2%A9%E7%89%88%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E7%8E%B0%E8%B1%A1) 这里查看。
+这是 **基岩版** 客户端的问题。具体请 [点击](https://minecraft.fandom.com/zh/wiki/%E5%9F%BA%E5%B2%A9%E7%89%88%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E7%8E%B0%E8%B1%A1) 这里查看。
 
 ### 我可以使用 Geyser 使得 Java 版玩家进入基岩版服务器吗?
 
