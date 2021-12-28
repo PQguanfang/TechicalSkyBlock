@@ -87,4 +87,4 @@ curl https://gist.githubusercontent.com/rtm516/e3e07d6595ee41e05a38b03c0f4d7a80/
 
 **注意:** 由于 iOS 的环境，如果您的设备性能不足，iOS 可能会在您玩游戏时杀死 NewTerm 2 的进程。
 
-你或许遇到了一些错误。如果是的话，运行 `su` 然后输入 root 密码 (默认是 `alpine`) 以获得 root 权限。再跟正常一样开启服务器，你有可能发现正常了。
+你或许遇到了一些错误。如果是的话，运行 `su` 然后输入 root 密码 (默认是 `alpine`) 以获得 root 权限。再跟平常一样开启 Geyser 服务器，你有可能发现一切正常了。

@@ -2,7 +2,7 @@
 
 **Geyser** 是两个不同版本游戏的协议转换器，但很遗憾的是，**Geyser** 仍有一些无法解决的限制。虽然 **Minecraft 基岩版** 和 **Java版** 看起来在很多地方是一致的，但它们在某些领域上仍有巨大的差异。
 
-除非 **Java版或者基岩版** 本身进行更新或者修改，否则下列限制 Geyser 永远无法修复：
+除非 **Java版或者基岩版** 协议进行更新或者修改，否则下列限制 Geyser 永远无法修复：
 
 * 在背包内显示 **玩家头颅** 皮肤
 * 聊天框内的 **可点击信息**
@@ -15,7 +15,7 @@
 * 不使用 Minecraft Brigadier 库的命令的命令补充提示
 * 任何在聊天框依赖 Tab 补充和直接发送的UI
 * 无法查看超过 **6** 种图案的气质&#x20;
-* 由于 **Java版** 和 **基岩版** 之间的差异，玩家在竹子周围存在移动问题。以下下面的插件可解决此问题，但请在使用前阅读 **README**：[https://github.com/Camotoy/BambooCollisionFix](https://github.com/Camotoy/BambooCollisionFix)
+* 由于 **Java版** 和 **基岩版** 之间的差异，玩家在竹子周围存在移动问题。下面的插件可解决此问题，但请在使用前阅读 **README**：[https://github.com/Camotoy/BambooCollisionFix](https://github.com/Camotoy/BambooCollisionFix)
 * 自定义铁砧配方
 * 主世界维度最低高度低于 **-64** 或者最高高度高于 **320** 或者在其他维度最低高度低于 **0** 或者最高高度高于 **256**。
 * 海豚的恩惠视觉效果（药水效果本身可以正常工作）
