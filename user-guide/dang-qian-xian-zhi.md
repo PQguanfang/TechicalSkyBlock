@@ -14,7 +14,7 @@
 * 通过 NBT 赋予颜色的药水
 * 不使用 Minecraft Brigadier 库的命令的命令补充提示
 * 任何在聊天框依赖 Tab 补充和直接发送的UI
-* 无法查看超过 **6** 种图案的气质&#x20;
+* 无法查看叠加超过 **6** 种图案的旗帜&#x20;
 * 由于 **Java版** 和 **基岩版** 之间的差异，玩家在竹子周围存在移动问题。下面的插件可解决此问题，但请在使用前阅读 **README**：[https://github.com/Camotoy/BambooCollisionFix](https://github.com/Camotoy/BambooCollisionFix)
 * 自定义铁砧配方
 * 主世界维度最低高度低于 **-64** 或者最高高度高于 **320** 或者在其他维度最低高度低于 **0** 或者最高高度高于 **256**。

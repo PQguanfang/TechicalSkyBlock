@@ -1,18 +1,14 @@
 # 在游戏主机上使用 Geyser
 
-所有的游戏主机版本客户端都可以加入第三方服务器 - 包括 Geyser 的服务器。像 **Xbox One，Nintendo Switch 和 PS4** 系统的玩家可以通过一个名为 BedrockConnect 的第三方软件进入第三方服务器。要获取该项目的技术信息或者如何搭建该软件，请查看 [他们的 GitHub 页面](https://github.com/Pugmatt/BedrockConnect) (_这个项目不隶属于 GeyserMC_)。没有其他替代的方法。
+所有的游戏主机版本客户端都可以加入第三方服务器 - 包括 Geyser 的服务器。像 **Xbox One，Nintendo Switch 和 PS4** 系统的玩家可以通过一个名为 BedrockConnect 的第三方软件进入第三方服务器。要获取该项目的技术信息或者如何搭建该软件，请查看 [他们的 GitHub 页面](https://github.com/Pugmatt/BedrockConnect) (_这个项目不隶属于 GeyserMC_)。没有其他替代的方法以解决此问题。
 
 ## Xbox One
 
-(请参考下面的视频)
-
-[![Xbox One BedrockConnect](https://camo.githubusercontent.com/16b2e654c48fe537827fc702d90960c0804c77e9be5bfc44badd0bf66d472053/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f67386d4876617356484d732f302e6a7067)](https://www.youtube.com/watch?v=g8mHvasVHMs)
+(请见原Wiki)
 
 ## Nintendo Switch
 
-(请参考下面的视频)
-
-[![Nintendo Switch BedrockConnect](https://camo.githubusercontent.com/6c5e8959ec0c85e7a9cd1e1f8a5bf97fc4011eee4660313596105895190a8fea/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f7a616c545f6f52316e504d2f302e6a7067)](https://www.youtube.com/watch?v=zalT\_oR1nPM)
+(请见原Wiki)
 
 ## PlayStation 4
 

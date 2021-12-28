@@ -13,4 +13,4 @@
 |                       `geyser statistics`                       |  `geyser.command.statistics`  |               打开 Java版 统计菜单。              |
 |                         `geyser version`                        |    `geyser.command.version`   |           查看当前 Geyser 的版本并检查更新。           |
 
-有关 Floodgate 的指令，请 点击======= 这里查看。
+有关 Floodgate 的指令，请 [点击这里](../floodgate-wiki/zhi-ling.md) 查看。
