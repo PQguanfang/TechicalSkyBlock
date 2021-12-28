@@ -4,7 +4,7 @@
 
 ## Floodgate
 
-有关 Floodgate 的帮助，请见: [这里](../floodgate-wiki/yi-zhi-wen-ti.md)。
+有关 Floodgate 的帮助，请见: [这里](../../floodgate-wiki/wen-ti.md)。
 
 ## 我无法连接到服务器! (服务器在好友选项卡没有显示或者在连接服务器时出现 "无法连接到世界")
 
@@ -19,7 +19,7 @@
 
 _如果 Geyser 服务器就在本地：_尝试将 `localhost` 或者 `0.0.0.0` 作为IP，以添加服务器形式进行连接。_如果这没有效果，或者你的 Geyser 服务器不在同一个电脑，那么请使用：_你 **本地** 的 IPv4 地址。
 
-### 点击 [here](https://github.com/GeyserMC/Geyser/wiki/Fixing-'Unable-to-Connect-to-World') 以修复 "无法连接至世界" 且后台无报错
+### [点击这里](xiu-fu-wu-fa-lian-jie-zhi-shi-jie.md) 以修复 "无法连接至世界" 且后台无报错
 
 #### `java.net.BindException: Address already in use: bind` on startup.
 
@@ -39,15 +39,15 @@ This usually has something to do on your host's end. Most commonly, it's because
 
 ## 卡在 "正在连接服务器" 且后台没有报错
 
-你或许需要升级你的 Java，如果确实是这样，请访问 [AdoptOpenJDK.net](https://adoptopenjdk.net)
+你或许需要升级你的 Java，如果确实是这样，请访问 [AdoptOpenJDK.net](https://adoptopenjdk.net)。
 
-Sometimes this happens in poor-network environments. There is an `mtu` option in the Geyser config; lower this number slowly (in batches of 100), restart each time, and re-test joining.
+有时这会发生在网络较差的环境中。 Geyser 配置中有一个 `mtu` 选项； 慢慢降低这个数字（以 100 为基准），每次修改后重新启动，并重新测试加入。
 
-This option will most likely not help if you are getting "Unable to Connect to World" with no console logs indicating a connection.
+如果您收到“无法连接到世界”而没有提示新的连接的控制台记录，则此选项很可能没有作用。
 
-## Login Failed
+## 登录失败
 
-_**If you are using a plugin version:**_ in your Geyser config, set your remote address to `127.0.0.1`. If that does not work, check your startup log for a message about Docker, and use that address in the remote address
+_**如果你正在使用一个插件版本：**_ 在你的 Geyser 配置，将你的 bedrock 的 ip 设置为 `127.0.0.1`。 If that does not work, check your startup log for a message about Docker, and use that address in the remote address
 
 #### Cannot reply to EncryptionRequestPacket without profile and access token
 

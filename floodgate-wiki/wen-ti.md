@@ -1,6 +1,6 @@
-# 已知问题
+# 问题
 
-## Known Issues & Caveats
+## 已知问题和注意事项
 
 If an issue you're experiencing is not listed here, please consider joining the Geyser [Discord](http://discord.geysermc.org).
 
