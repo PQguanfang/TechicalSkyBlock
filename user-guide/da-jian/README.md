@@ -52,22 +52,22 @@
 
 请见 [这个](broken-reference) 页面查看帮助。
 
-### Port Forwarding
+### 端口转发
 
-Unlike Minecraft Java Edition, Bedrock Edition runs on port 19132 on the UDP protocol. When port forwarding, make sure to allocate to 19132 UDP or another UDP port. For many server hosting providers, you will simply need to change your Bedrock listening port (see [here](https://github.com/GeyserMC/Geyser/wiki/Supported-Hosting-Providers) for a list of supported providers).
+不像 **Minecraft Java版本**，基岩版的端口默认是 **UDP** 协议的 **19132**。当你设置 **端口转发** 时，必须保证你分配了 **19132 UDP** 或者其他 **UDP** 端口。
 
 ### Termux (安卓)
 
-Please read the disclaimer [here](https://github.com/GeyserMC/Geyser/wiki/Setup#standalone-setup) before continuing.
+在此之前，请确保你已阅读过 [这里](./#du-li-ban-de-da-jian)。
 
-1. Download and install [Termux](https://termux.com)
-2. Run `pkg install openjdk-17`
-3. Run `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`
-4. Run `java -jar Geyser.jar`
+1. 下载并安装 [Termuerm](https://termux.com)
+2. 运行 `pkg install openjdk-17`
+3. 运行 `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`
+4. 执行 `java -jar Geyser.jar`
 
-OR
+或者
 
-We have an automated setup script for clean Termux installs, which might not work for all users. If the manual guide above does not work, try this. Run this to start the download/install:
+我们有一个用于轻量的 Termux 的自动安装脚本，可能不适用于所有用户。如果上面的指南不起作用，请尝试此操作。运行此命令以开始下载/安装：
 
 ```
 curl https://gist.githubusercontent.com/rtm516/e3e07d6595ee41e05a38b03c0f4d7a80/raw/install.sh | bash
@@ -75,11 +75,11 @@ curl https://gist.githubusercontent.com/rtm516/e3e07d6595ee41e05a38b03c0f4d7a80/
 
 ### NewTerm 2 (iOS)
 
-**Note:** A jailbreak is required. You can find what jailbreak to use for your device [here](https://docs.google.com/spreadsheets/d/11DABHIIqwYQKj1L83AK9ywk\_hYMjEkcaxpIg6phbTf0/edit?usp=sharing).
+**注意:** 你需要事先进行越狱。
 
-1. Install [Filza File Manager](http://cydia.saurik.com/package/com.tigisoftware.filza/).
-2. Install [NewTerm 2](https://chariz.com/get/newterm).
-3. Download jre-16 for iOS and install it using Filza [here](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb).
+1. 安装 [Filza File Manager](http://cydia.saurik.com/package/com.tigisoftware.filza/).
+2. 安装 [NewTerm 2](https://chariz.com/get/newterm).
+3. 下载 jre-16 iOS 版 Filza 并通过 [这里 ](https://github.com/PojavLauncherTeam/PojavLauncher\_iOS/releases/download/v16-openjdk/openjdk-16-jre\_16.0.0+git20201217.8383f41-2\_iphoneos-arm.deb)
 4. Download my modified java commands, and install it using Filza [here](https://cdn.discordapp.com/attachments/558829512633090048/834014323755319306/com.letschill.java\_0.1\_iphoneos-arm.deb).
 5. Open NewTerm 2 and run `wget https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar`.
 6. Run `java -jar Geyser.jar`.
