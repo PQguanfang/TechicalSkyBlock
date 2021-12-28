@@ -67,53 +67,53 @@ userAuths:
 
 **`passthrough-players`**: 是否直接显示 **Java** 版服务器的人数。
 
-**`legacy-ping-passthrough`**: If enabled, manually pings the server by impersonating a Minecraft client instead of using the server's API. **This option should **_**only**_** be enabled if your MOTD or player count is not accurate,** as it can cause errors especially on BungeeCord. This option does nothing on standalone.
+**`legacy-ping-passthrough`**: 如果启用，则通过模拟 **Minecraft** 客户端而不是使用服务器的 **API** 手动 **ping** 服务器。**你应当 **_**只在你**_** 的MOTD人数不正确情况下再考虑开启此选项。**由于这个选项开启通常会在 **BungeeCord** 等上出现问题。此选项在独立版无效。
 
-**`ping-passthrough-interval`**: How often the fake Minecraft client should attempt to ping the remote server to update information, in seconds (a setting of 1 will ping the server every second; a setting of 3 will ping the server every three seconds). Only relevant for standalone and legacy ping passthrough. Increase the number if you're getting timeout or BrokenPipe exceptions.
+**`ping-passthrough-interval`**: 虚拟的 Minecraft 客户端应该尝试 ping 远Java版服务器以更新信息的频率，**以秒为单位**（设置为 **1** 将每秒 ping 一次服务器；设置为 **3** 将每三秒 ping 一次服务器）。 仅与独立和传统 ping 直通相关。 如果您遇到超时或 BrokenPipe 错误，请增加该数字。
 
-**`max-players`**: The maximum amount of players shown when pinging the server. This does not actually cap how many players can join the Geyser instance at this time. The number will visually increase when pinging if the amount of players is greater, as Bedrock clients will not even attempt to join a full server.
+**`max-players`**: 在 ping Geyser服务器时显示的最多玩家数量。这个选项实际上不是真的去限制玩家上限。当服务器玩家满员时，人数上限也会跟着提升，而基岩版客户端本身在检测到服务器满员时会直接不尝试连接到服务器。
 
-**`debug-mode`**: If debug messages should be printed in console. Useful if you run into an error and need more context.
+**`debug-mode`**: **debug** 信息是否在控制台输出。这在你遇到错误或者需要技术信息时有用。
 
-**`general-thread-pool`**: The amount of threads Geyser will be able to use. Higher is not always better :P.
+**`general-thread-pool`**: **Geyse**r 将能够使用的线程数量。越高并不总是代表越好 :P。
 
-**`allow-third-party-capes`**: If third party (Optifine, 5zig, LabyMod, etc.) capes should be displayed to the bedrock player.
+**`allow-third-party-capes`**: 是否为基岩版玩家显示第三方 (Optifine, 5zig, LabyMod等) 的披风。
 
-**`allow-third-party-ears`**: If third party Deadmau5-style ears should be enabled. Currently only supports MinecraftCapes.
+**`allow-third-party-ears`**: 是否为基岩版玩家显示第三方 Deadmau5-style ears。目前只支持 MinecraftCapes。
 
-**`show-cooldown`**: Bedrock Edition currently does not have Java Edition 1.9+ combat mechanics. In order to get around this, Geyser sends a fake cooldown by sending a title message. This cooldown should not show if 1.8 combat mechanics are in use. The options available for this setting are `false` (no cooldown is sent), `title`/`true` (a cooldown indication is shown in the title), or `actionbar` (a cooldown indication is shown in the action bar). All other options default to `false`.
+**`show-cooldown`**: 基岩版客户端目前并没有 **Java版 1.9+** 的 **PvP** 机制。为了解决这个问题，Geyser 发送虚假的 Title 以代替攻击冷却条。如果你的服务器使用 1.8 的 PvP 机制，那么此攻击冷却条将不会显示。此选项可以填写 `false` (不发送攻击冷却条)， `title`/`true` (以 Title 形式显示攻击冷却条)，或者`actionbar` (以底部条显示攻击冷却条)。填写其他值等于填写 `false`。
 
-**`show-coordinates`**: Bedrock Edition has an option to show coordinates in the top-left part of your screen. This setting enables or disables this.
+**`show-coordinates`**: 基岩版有一个可以在屏幕的左上角显示坐标的选项。 此选项启用或禁用此功能。
 
-**`emote-offhand-workaround`**: Since Java Edition 1.9, clients have had the ability to switch the item in their mainhand and offhand with a keybind. Bedrock Edition does not have this ability, so this config option makes up for it, If set, when a Bedrock player performs any emote, it will swap the offhand and mainhand items, just like the Java Edition keybind. There are three options this can be set to:
+**`emote-offhand-workaround`**: 从 **Java 版 1.9** 开始，客户端可以使用所选择的按键 **在主手和副手中切换物品**。 基岩版没有这个功能，所以这个选项弥补了它。如果设置，当基岩版玩家使用任意表情时，他就会交换副手和主手物品，就像Java版的一样。 这里可以填写为三个值：
 
-* `disabled` - the default/fallback, which doesn't apply this workaround
-* `no-emotes` - emotes will NOT be sent to other Bedrock clients and offhand will be swapped. This effectively disables all emotes from being seen.
-* `emotes-and-offhand` - emotes will be sent to Bedrock clients and offhand will be swapped
+* `disabled` - 默认值，不使用此解决方案
+* `no-emotes` - 表情将不会发送给其他基岩版玩家，同时进行主手和副手的切换物品。这也代表表情功能在 Geyser服务器 中关闭。
+* `emotes-and-offhand` - 表情发送给其他基岩版玩家同时也会进行主手和副手切换物品
 
-**`default-locale`**: The default locale to send to players if their locale could not be found. Check [this](https://github.com/GeyserMC/Geyser/wiki/FAQ#what-languages-does-geyser-support) page to find the code corresponding to your language.
+**`default-locale`**: 如果无法查找玩家的语言，那么 **Geyse**r 给玩家设置的语言。[点击这里](chang-jian-wen-ti.md) 以查看你的语言的代码。
 
-**`chunk-caching`**: Cache chunks for each Bedrock player, adds support for additional sounds and fixing movement issues at the expense of slightly more RAM usage. This option is always on for Spigot as we can use the server's API to get block information at no expense. _Geyser does not recommend disabling this option._
+**`chunk-caching`**: 为每位基岩版玩家提供区块缓存，这将以增加 **RAM** 内存为代价而带来 额外音效支持和修复移动问题。在 **Spigot** 上使用将会始终启用此选项，因为我们可以使用服务器的 **API** 来获取区块信息而没有其他任何增加的资源损耗。 _Geyser 不推荐你关闭这个选项。_
 
-**`cache-images`**: Specify how many days images will be cached to disk to save downloading them from the internet. A value of 0 is disabled. (Default: 0)
+**`cache-images`**: 指定图片将被缓存到本地的天数以节省从 **互联网** 下载它们的时间。 如果设置成 **0** 则是被禁用。（默认值：0）
 
 **`allow-custom-skulls`**: 允许 **Geyser** 翻译自定义头颅皮肤。这会在一些低端/老的设备上造成严重的卡顿问题。
 
 **`above-nether-bedrock-building`**: 基岩版的下界最高高度是127，玩家无法在 **128** 格以上高度放置方块 - 开启这个选项以后，Geyser 会把下界维度翻译成末地维度，虽然这么做会导致下界的天空是末地的样子，但目前只能通过这种方法解决你在下界放置 **128** 格以上高度放置方块的问题。
 
-**`force-resource-packs`**: Force clients to load all resource packs if there are any. If set to false, it allows the user to disconnect from the server if they don't want to download the resource packs.
+**`force-resource-packs`**: 如果 Geyser 加载了资源包，那么将强制玩家使用改资源包。如果设置为 **false**，那么玩家可以拒绝该资源包并断开与服务器的连接。
 
-**`xbox-achievements-enabled`**: Allows Xbox achievements to be unlocked. **This disables certain commands so the Bedrock client can't "cheat" to get them; this cannot be worked around if you want to enable this**. Commands such as /gamemode and /give will not work from Bedrock with this enabled.
+**`xbox-achievements-enabled`**: 是否在玩家游戏时解锁 Xbox 成就。这将导致你的服务器的指定指令无法使用，因为”作弊“选项将会被关闭。**该如果开启，像 /gamemode 和 /give 这样的指令在基岩版将无法使用。**
 
 ### 高级选项
 
-**`scoreboard-packet-threshold`**: Geyser updates the Scoreboard after every Scoreboard packet, but when Geyser tries to handle a lot of scoreboard packets per second can cause serious lag. This option allows you to specify after how many Scoreboard packets per seconds the Scoreboard updates will be then limited to four updates per second.
+**`scoreboard-packet-threshold`**: Geyser 会在每个记分板数据包之后更新记分板，但是当 Geyser 试图每秒处理大量记分板数据包时会导致严重的延迟。 此选项允许您指定在每秒多少个计分板数据包之后，计分板更新将被限制到每秒四次更新。
 
-**`enable-proxy-connections`**: Allow connections from ProxyPass and Waterdog. See [https://www.spigotmc.org/wiki/firewall-guide/](https://www.spigotmc.org/wiki/firewall-guide/) for assistance - use UDP instead of TCP. **This option does not need to be enabled in instances like BungeeCord or Velocity**.
+**`enable-proxy-connections`**: 允许来自 **ProxyPass** 和 **Waterdog** 的连接。 查看 [https://www.spigotmc.org/wiki/firewall-guide/](https://www.spigotmc.org/wiki/firewall-guide/) 以获取帮助 - 使用  UDP 而不是 TCP。**如果你使用 BungeeCord 或者 Velocity 这样的代理端，则不需要开启本选项。**
 
-**`mtu`**: [https://en.wikipedia.org/wiki/Maximum\_transmission\_unit](https://en.wikipedia.org/wiki/Maximum\_transmission\_unit) - The internet supports a maximum MTU of 1492 but could cause issues with packet fragmentation. 1400 is the default.
+**`mtu`**: [https://en.wikipedia.org/wiki/Maximum\_transmission\_unit](https://en.wikipedia.org/wiki/Maximum\_transmission\_unit) - ~~互联网支持的最大 MTU 为 1492，但可能会导致数据包碎片问题。~~ 1400 是默认值。
 
-**`use-direct-connection`**: Whether to connect directly into the Java server without creating a TCP connection. This should only be disabled if a plugin that interfaces with packets or the network does not work correctly with Geyser. If enabled on plugin versions, the remote address and port sections are ignored. If disabled on plugin versions, expect performance decrease and latency increase.
+**`use-direct-connection`**: 是否直接连接到 **Java** 服务器而不创建 **TCP** 连接。 仅当与数据包或网络无法与 **Geyser** 正常工作时，才应关闭此功能。 如果在插件版本上启用，Java版服务器地址和端口部分将被忽略。 如果在插件版本上禁用，将会导致性能会下降，延迟会增加。
 
 默认 Geyser 配置：
 
