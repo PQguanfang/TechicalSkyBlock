@@ -29,13 +29,13 @@ _如果 Geyser 服务器就在本地：_尝试将 `localhost` 或者 `0.0.0.0` �
 
 点击这个链接以了解如何升级到 **Java 16**: [https://paper.readthedocs.io/en/latest/java-update/index.html](https://paper.readthedocs.io/en/latest/java-update/index.html).
 
-#### Hosting provider will not immediately open up UDP.
+#### 您的服务商可能不会及时打开UDP端口
 
-These steps only apply for the standalone version of Geyser.
+这些步骤仅适用于 Geyser 的独立版本。
 
-This usually has something to do on your host's end. Most commonly, it's because they do not open up ports over the UDP protocol, which is what Minecraft: Bedrock Edition uses, opposed to Minecraft: Java Edition using TCP. One way to get around this (if you're using an online host) is to shut down your server, and when asking for a server jar, select Nukkit (you won't actually be switching to Nukkit). Afterward, open up your FTP file manager and find the Nukkit jar. Then, replace this jar with the server software you're using. Upon starting up the server, it should open up ports over UDP whilst still allowing you to use the server jar you desire.
+这通常和你的主机端口有关。 最常见的是，跟Java版的常用的 TCP 端口不同，你的主机很有可能没有打开基岩版所使用的 UDP 协议的端口。 One way to get around this (if you're using an online host) is to shut down your server, and when asking for a server jar, select Nukkit (you won't actually be switching to Nukkit). Afterward, open up your FTP file manager and find the Nukkit jar. Then, replace this jar with the server software you're using. Upon starting up the server, it should open up ports over UDP whilst still allowing you to use the server jar you desire.
 
-**PLEASE NOTE:** If your server automatically redownloads jars upon startup, such as with an autoupdate system, this workaround will not work. Please contact your host if this does not work for you as there is nothing we can do.
+**PLEASE NOTE:** If your server automatically redownloads jars upon startup, such as with an autoupdate system, this workaround will not work.如果上述方案没有解决你的问题，那么也没有什么我们能做的了。请联系你的服务器供应商，让他们开放相应的UDP端口。
 
 ## 卡在 "正在连接服务器" 且后台没有报错
 
@@ -51,37 +51,37 @@ _**如果你正在使用一个插件版本：**_ 在你的 Geyser 配置，将�
 
 #### Cannot reply to EncryptionRequestPacket without profile and access token
 
-There are two causes of this message:
+出现这个消息一般有两个原因:
 
-_Floodgate issue_:
+_Floodgate 问题_:
 
-This message can occur with a Floodgate setup. Usually, it means that a misconfiguration occurred, or another plugin is conflicting. If you copied the Floodgate key from its folder to the Geyser folder on the same server, this is now unnecessary and you can safely remove the Geyser copy, restart, and try again.
+如果您设置种启用了 Floodgate 可能会出现此消息。 通常，这意味着您的配置是错误的，或与其他插件冲突。 如果您将 Floodgate 密钥从其文件夹复制到同一服务器上的 Geyser 文件夹，那么 Geyser 文件夹内的密钥就不是必要的。您可以安全的删除掉复制到 Geyser 文件夹中的密钥文件，重新启动，然后重试。
 
-_Server is in Online Mode while Geyser is in Offline Mode_:
+_服务器是正版认证模式而你的Geyser设置的是离线模式_:
 
-If you have your configuration set up like this, put simply, it won't work. If authentication for the Java server is set to online, it is expected Geyser is configured the same way. The server requires a valid Minecraft: Java Edition account, and if you aren't logging into one with Geyser, then you will be unable to join the server. If your configuration is set up properly and you're still getting this issue, it could be that your credentials are invalid.
+如果你的配置如上所述，那么简单来说，Geyser自然不会正常运作。 如果你将服务器的认证方式设置为正版认证，那么你的 Geyser 配置也应该是相同的。 正版认证的服务器将会要求您使用 Java正版账户 进行登录认证，如果你再登陆Geyser的时候没有使用正版账户认证那么你将无法加入服务器。如果你的配置没有问题却仍然遇到这个报错，那么有可能是您的登录凭据无效或者是连接正版认证服务器进行认证时超时。
 
-#### Connection Refused: \<INSERT IP AND/OR DOMAIN>
+#### Connection Refused: <INSERT IP AND/OR DOMAIN>
 
-Connection Refused usually means that a Java server could not be found on that port, or the server denied access to the connection on a network level. The latter can happen with anti-DDOS plugins such as TCPShield, but otherwise ensure that the server you're trying to connect to is spelled correctly in the config, is up and is port forwarded correctly.
+连接被拒绝通常意味着请求该端口时无法连接 Java 服务器，或者服务器拒绝访问网络级别的外部连接。 后者可能会发生在类似 TCPShield 等 DDOS 防护插件上，如果您没有类似的 DDOS 防护插件，请确保您尝试连接的服务器连接IP或域名在配置中拼写正确，已启动且端口转发正确。
 
-If you're updating from an old build of Geyser, set your remote address to `auto` and try again.
+如果您从旧版本的 Geyser 进行更新，请将您的远程地址设置为`auto`，然后重试。
 
 #### Floodgate Misconfiguration
 
-See [this page](https://github.com/GeyserMC/Floodgate/wiki/Issues) for more information.
+请查看 [这个页面](https://github.com/GeyserMC/Floodgate/wiki/Issues) 查看更多信息
 
 #### Mojang Resetting Account Credentials
 
-This is unfortunately something we have no control over, and is most likely the case when you're running Geyser as a plugin on a server host or joining a friend far away from your location. If you're running Geyser locally, this should not happen to you, but what we recommend for servers is a plugin we make called [Floodgate](https://github.com/GeyserMC/Floodgate), which allows for Bedrock clients to join your server without needing a Java Edition account. Take a look [here](https://github.com/GeyserMC/Geyser/wiki/Floodgate) for more information.
+不幸的是，这是我们无法控制的事情，当您在服务器上将 Geyser 作为插件运行或加入远离您所在位置的朋友时，很可能就是这种情况，异地登陆会让Mojang判定您的账户可能被盗号，并因此重置登录凭据。 如果您在本地运行 Geyser，这不应该发生在您身上，但是我们为服务器推荐的是我们制作的插件 [Floodgate](https://github.com/GeyserMC/Floodgate), 它允许基岩客户端在不需要 Java 版帐户的情况下加入您的服务器。  [点击了解这个插件](https://github.com/GeyserMC/Geyser/wiki/Floodgate) 以获得更多帮助。
 
 ## "Invalid IP address!" from Bedrock
 
-It's currently unknown why this happens even for valid domains. Try using the IPv4 address.
+目前尚不清楚为什么，即使对于有效IP域名也会发生这种情况。 尝试使用 IPv4 地址。
 
 ## 基岩版客户端在使用指令时出现卡顿或者崩溃
 
-在你的 Geyser 配置文件中关闭 `command-suggestions` 选项。 your Geyser config. This will stop the freezing at the expense of removing command suggestions from Bedrock clients. If you're a dedicated server admin, you can have a list of commands players should be using. This will remove any unnecessary commands from tab completion as well for Java players. It has other benefits too. Here's a plugin that can just do that: [CommandWhitelist](https://www.spigotmc.org/resources/commandwhitelist-spigot-waterfall-velocity.81326/)
+在你的 Geyser 配置文件中关闭 `command-suggestions` 选项。 关闭这个设置后基岩版玩家将无法进行命令补全，但是可以防止因此造成的游戏卡顿或崩溃。 如果你是服务器的管理员，你可以准备一份命令白名单让玩家使用， 这将会把非必要的命令从TAB补全中移除，对于Java版玩家来说也是一样。他还有其他好处。这是一个可以做到此功能的插件： [CommandWhitelist](https://www.spigotmc.org/resources/commandwhitelist-spigot-waterfall-velocity.81326/)
 
 ## BungeeCord 在基岩版玩家加入后卡顿或者崩溃
 
@@ -89,7 +89,7 @@ It's currently unknown why this happens even for valid domains. Try using the IP
 
 ## Failed to load locale asset cache: Unrecognized token 'Cannot'
 
-This or anything else related to failing to download a locale file on startup is usually caused by java trying to connect using IPv6 and Mojang only use IPv4, so start Geyser or the server up with this flag `-Djava.net.preferIPv4Stack=true`, EG: `java -Xms1024M -Djava.net.preferIPv4Stack=true -jar Geyser.jar`
+这与启动时无法下载区域设置文件相关的任何其他内容通常是由 java 尝试使用 IPv6 连接而 Mojang 仅使用 IPv4 引起的，因此使用在启动命令添加此标识来固定使用ipv4： `-Djava.net.preferIPv4Stack=true`, 就像这样: `java -Xms1024M -Djava.net.preferIPv4Stack=true -jar Geyser.jar`
 
 ## Outdated client! Please use 1.x.x
 
@@ -101,22 +101,23 @@ This or anything else related to failing to download a locale file on startup is
 
 ## Query: Incorrect Magic!
 
-See here: [https://www.spigotmc.org/threads/query-incorrect-magic-and-high-cpu-usage.159386/#post-2709057](https://www.spigotmc.org/threads/query-incorrect-magic-and-high-cpu-usage.159386/#post-2709057)
+看这里： [https://www.spigotmc.org/threads/query-incorrect-magic-and-high-cpu-usage.159386/#post-2709057](https://www.spigotmc.org/threads/query-incorrect-magic-and-high-cpu-usage.159386/#post-2709057)
 
-* If you don't use a reverse proxy such as TCPShield make sure that `enable-proxy-protocol` is set to false.
+*如果您不使用 TCPShield 等反向代理，请确保将 `enable-proxy-protocol` 设置为 false.
 
 ## Only for BungeeCord with floodgate
 
-If you use floodgate ensure that it is installed on all of your Spigot backend servers as following:
+如果您使用 floodgate，请确保将其安装在所有 Spigot 后端服务器上，如下所示：
 
-1. `Bungee: Geyser and Floodgate`
-2. `Lobby: floodgate`
-3. `Server-1: floodgate`
-4. `Server-2: floodgate` And so on.
+1. `Bungee: Geyser 和 Floodgate`
+2. `大厅: floodgate`
+3. `子服-1: floodgate`
+4. `子服-2: floodgate` 
+   其他的同理。
 
-* Please also make sure that you have the same `key.pem` and `config.yml` on all of your servers.
+* 请保证你的 `key.pem` 和 `config.yml` 在所有的服务器上使用的是相同的配置。
 
-If your players can't connect from the lobby to another backend server, check console.
+如果您的玩家无法从大厅连接到另一个后端服务器，请检查控制台。
 
 #### Plugins that can cause issues
 
