@@ -21,7 +21,7 @@
 
 #### [点击这里](xiu-fu-wu-fa-lian-jie-zhi-shi-jie.md) 以修复 "无法连接至世界" 且后台无报错
 
-**`java.net.BindException: Address already in use: bind` on startup.**
+**在启动时提示 `java.net.BindException: Address already in use: bind` **&#x20;
 
 这代表 **Geyser** 服务器所开设的端口已被占用，请确保你关闭了所有占用该端口的软件，然后再试。如果这没有起作用，通常重启你的电脑即可解决该问题。
 
@@ -69,7 +69,7 @@ _服务器是正版模式而你的 Geyser 设置的是离线模式_:
 
 **Mojang Resetting Account Credentials**
 
-不幸的是，这是我们无法控制的事情，当您在服务器上将 **Geyser** 作为插件运行，很可能就是这种情况，异地登陆会让 **Mojang**判定您的账户可能被盗号，并因此重置登录凭据。 如果您在本地运行 **Geyser**，这不应该发生在您身上，但是我们为服务器推荐的是我们制作的插件 [Floodgate](https://github.com/GeyserMC/Floodgate), 它允许基岩版客户端在不需要 Java 版帐户的情况下加入您的服务器。 [点击了解这个插件](https://github.com/GeyserMC/Geyser/wiki/Floodgate) 以获得更多帮助。
+不幸的是，这是我们无法控制的事情，当您在服务器上将 **Geyser** 作为插件运行，很可能出现这种情况，异地登陆会让 **Mojang** 判定您的账户可能被盗号，并因此重置登录凭据。 如果您在本地运行 **Geyser**，这不应该发生。我们推荐由我们制作的插件 [Floodgate](https://github.com/GeyserMC/Floodgate), 它允许基岩版客户端在不需要 Java 版帐户的情况下加入您的服务器。 [点击了解这个插件](https://github.com/GeyserMC/Geyser/wiki/Floodgate) 以获得更多帮助。
 
 ### 基岩版客户端提示 "无效IP地址"
 
