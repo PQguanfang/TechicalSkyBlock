@@ -23,3 +23,8 @@
 * [问题](floodgate-wiki/wen-ti.md)
 * [功能](floodgate-wiki/gong-neng.md)
 * [指令](floodgate-wiki/zhi-ling.md)
+
+## 其他 <a href="#other" id="other"></a>
+
+* [GeyserOptionalPack](other/geyseroptionalpack.md)
+* [Geyser-Farbic](other/geyser-farbic.md)
