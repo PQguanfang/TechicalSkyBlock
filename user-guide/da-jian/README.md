@@ -1,6 +1,6 @@
 # 搭建
 
-基岩版客户端将通过 **Geyser** 连接到 **Java版服务器**，**Geyser** 的工作就是将两个版本之间的数据包进行转换。截止到目前，有 **6** 个版本的 Geyser 可供使用：**Geyser Spigot版（当然在 Paper 一类的服务端也可以正常使用）、Geyser BungeeCord版（同理，在 Waterfall 一类的服务端也可以正常使用）、Geyser Velocity版、Geyser Sponge版，Geyser Farbic版（不支持客户端Mod，更多信息请见这里=========）和Geyser 独立版**。前面 **5** 个版本以 插件或者Mod 的形式安装到服务端内。而独立版是一个独立的服务端，它需要独立运行。
+基岩版客户端将通过 **Geyser** 连接到 **Java版服务器**，**Geyser** 的工作就是将两个版本之间的数据包进行转换。截止到目前，有 **6** 个版本的 Geyser 可供使用：**Geyser Spigot版（当然在 Paper 一类的服务端也可以正常使用）、Geyser BungeeCord版（同理，在 Waterfall 一类的服务端也可以正常使用）、Geyser Velocity版、Geyser Sponge版，Geyser Farbic版（不支持客户端Mod，更多信息请见** [**这里**](../../other/geyser-farbic.md)**）和Geyser 独立版**。前面 **5** 个版本以 插件或者Mod 的形式安装到服务端内。而独立版是一个独立的服务端，它需要独立运行。
 
 ## 准备
 
