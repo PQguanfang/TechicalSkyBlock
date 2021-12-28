@@ -1,42 +1,40 @@
 # 修复 “无法连接至世界”
 
-_Unable to Connect to World_ is by far the most common error people get when attempting to set up Geyser. Here's some steps on how to solve that.
+_无法连接至世界_ 是许多人在使用 Geyser 时遇到的共同问题，下面我们将一步一步教你如何解决这一问题。
 
-_**If you are using a hosting provider: Many providers and remote hostings have additional steps you have to perform in order to be supported; see**_ [_**Supporting Hosting Providers**_](https://github.com/GeyserMC/Geyser/wiki/Supported-Hosting-Providers)_**. If you're self-hosting from home, you don't need to worry about this.**_
+## 在我们开始之前...
 
-## Before we start...
+### ...Java 玩家同样也无法加入！
 
-### ...Java players can't connect either!
+这 **肯定不是** Geyser的问题。**Geyser** 不会对 **Java版服务器** 进行任何改动。**Floodgate** 也只对 **基岩版玩家** 修改登录流程。所以，请联系你的服务商，向他们寻求解决服务器连接的问题。
 
-This **should not be** a Geyser problem. Geyser does not modify server behavior. Floodgate does modify the login structure but only for Bedrock players. Contact your hosting provider or look elsewhere for fixing this connection issue.
+### ...我刚刚更新了Geyser，现在它没法正常工作了！
 
-### ...I just updated, and now it doesn't work!
+如果这在你更新了插件版的Geyser后出现，请确保你是关闭了你的服务器，然后替换了 Geyser jar 文件，然后重新开启你的服务器。
 
-If this occurred after updating a plugin version of Geyser, ensure that you shut off your server, swapped the Geyser jar, and then started up your server.
+### ...控制台有一堆报错！
 
-### ...There are errors in my console!
+请阅读 [常见异常](./)。如果你的问题并不在那个页面出现，请加入我们的 [Discord](https://discord.geysermc.org) 以寻求帮助。
 
-Please read through the [common issues page](https://github.com/GeyserMC/Geyser/wiki/Common-Issues). If there is another error not documented there, join us on our [Discord](https://discord.geysermc.org).
+### ...你被无限的重启困扰了吗？
 
-### ...Have you tried restarting?
+特别是手机用户，有时，你只需要重启你的游戏客户端就可以解决这个问题了。
 
-Especially on mobile devices, sometimes just restarting Minecraft fixes the issue.
+## 是服务器的问题还是客户端的问题？
 
-## Is it the server or the client?
+将你的 **Java** 版服务器 **IP** 和基岩版的 **IP** 放在 [https://mcsrvstat.us/](https://mcsrvstat.us) 网站查询。这是首先确定服务器是否正常工作的好办法。
 
-Run your Java server IP and Bedrock address here: [https://mcsrvstat.us/](https://mcsrvstat.us). It's a great way of determining if the server is reachable in the first place.
+## 一般排除步骤
 
-## General troubleshooting steps
-
-### Ensure you're connecting on the right IP
+### 确保你使用正确的 IP 连接
 
 You should be connecting with the Java server IP and the Bedrock port. If you port forwarded 19132, for example, you should specify port 19132 when connecting from Bedrock.
 
-### I'm using a hosting provider or VPS!
+### 我正在使用一个云主机 或者 VPS！
 
-Please read [this page on supported hosting providers](https://github.com/GeyserMC/Geyser/wiki/Supported-Hosting-Providers) to see if there are extra configuration steps required for your hosting or server provider.
+请向你的服务商寻求帮助。
 
-### Port forwarding
+### 端口转发
 
 Your server does need to be port forwarded. Generally, you can follow any Minecraft: Java Edition port forwarding guide; however, you need to replace any mention of TCP with UDP and, by default, any mention of 25565 with 19132.
 

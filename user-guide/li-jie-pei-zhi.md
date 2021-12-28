@@ -113,7 +113,7 @@ userAuths:
 
 **`mtu`**: [https://en.wikipedia.org/wiki/Maximum\_transmission\_unit](https://en.wikipedia.org/wiki/Maximum\_transmission\_unit) - ~~互联网支持的最大 MTU 为 1492，但可能会导致数据包碎片问题。~~ 1400 是默认值。
 
-**`use-direct-connection`**: 是否直接连接到 **Java** 服务器而不创建 **TCP** 连接。 仅当与数据包或网络无法与 **Geyser** 正常工作时，才应关闭此功能。 如果在插件版本上启用，Java版服务器地址和端口部分将被忽略。 如果在插件版本上禁用，将会导致性能会下降，延迟会增加。
+**`use-direct-connection`**: 是否直接连接到 **Java** 服务器而不创建 **TCP** 连接。只有当某个插件的数据包或网络无法与 **Geyser** 正常工作时，才应关闭此功能。 如果在插件版本上启用，Java版服务器地址和端口部分将被忽略。 如果在插件版本上禁用，将会导致性能会下降，延迟会增加。
 
 默认 Geyser 配置：
 
