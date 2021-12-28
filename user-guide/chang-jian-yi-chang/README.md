@@ -47,7 +47,7 @@ _如果 Geyser 服务器就在本地：_尝试将 `localhost` 或者 `0.0.0.0` �
 
 ## 登录失败
 
-_**如果你正在使用一个插件版本：**_ 在你的 Geyser 配置，将你的 bedrock 的 ip 设置为 `127.0.0.1`。 If that does not work, check your startup log for a message about Docker, and use that address in the remote address
+_**如果你正在使用一个插件版本：**_ 在你的 Geyser 配置，将你的 bedrock 的 ip 设置为 `127.0.0.1`。 如果这不起作用，请检查您的启动日志以获取有关 Docker 的消息，并在该地址配置中使用远程地址配置。
 
 #### Cannot reply to EncryptionRequestPacket without profile and access token
 
