@@ -33,7 +33,7 @@ _如果 Geyser 服务器就在本地：_尝试将 `localhost` 或者 `0.0.0.0` �
 
 这些步骤仅适用于 Geyser 的独立版本。
 
-这通常和你的主机端口有关。 最常见的是，跟Java版的常用的 TCP 端口不同，你的主机很有可能没有打开基岩版所使用的 UDP 协议的端口。 One way to get around this (if you're using an online host) is to shut down your server, and when asking for a server jar, select Nukkit (you won't actually be switching to Nukkit). Afterward, open up your FTP file manager and find the Nukkit jar. Then, replace this jar with the server software you're using. Upon starting up the server, it should open up ports over UDP whilst still allowing you to use the server jar you desire.
+这和你的主机端口有关，通常来说，他们没有通过UDP协议来开放端口（对于基岩版来说，服务端会使用UDP协议的端口，而Java端MC所使用的端口是TCP协议）。解决这个问题的一个办法（如果你是腐竹），那就是关服。当机子询问核心文件的时候，选择NK（补充:你当然不一定会选择NK，NK也有分支）。然后，打开你的FTP文件管理器找到Nukkit.jar,然后替换你服务器软件所使用的Nukkit.jar。当开服的时候，它应该会打开使用UDP协议的端口。并且依然允许你使用你所要的服务端核心
 
 **PLEASE NOTE:** If your server automatically redownloads jars upon startup, such as with an autoupdate system, this workaround will not work.如果上述方案没有解决你的问题，那么也没有什么我们能做的了。请联系你的服务器供应商，让他们开放相应的UDP端口。
 
