@@ -17,9 +17,9 @@
 * _如果你使用的是 PS4_: [请使用使用一个 LAN 代理](https://github.com/GeyserMC/Geyser/wiki/Using-Geyser-with-Consoles#playstation-4)
 * _如果你使用的是 Nintendo Switch_: 目前没有方法可以使用好友选修课连接，但你仍然可以使用 [BedrockConnect](https://github.com/GeyserMC/Geyser/wiki/Using-Geyser-with-Consoles) 以添加服务器形式连接。
 
-\_如果 Geyser 服务器就在本地：\_尝试将 `localhost` 或者 `0.0.0.0` 作为IP，以添加服务器形式进行连接。\_如果这没有效果，或者你的 Geyser 服务器不在同一个电脑，那么请使用：\_你 **本地** 的 IPv4 地址。
+如果 Geyser 服务器就在本地：尝试将 `localhost` 或者 `0.0.0.0` 作为IP，以添加服务器形式进行连接。如果这没有效果，或者你的 Geyser 服务器不在同一个电脑，那么请使用：你 **本地** 的 IPv4 地址。
 
-#### 点击这里 以修复 "无法连接至世界" 且后台无报错
+#### [点击这里](xiu-fu-wu-fa-lian-jie-zhi-shi-jie.md) 以修复 "无法连接至世界" 且后台无报错
 
 **`java.net.BindException: Address already in use: bind` on startup.**
 
