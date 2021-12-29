@@ -7,14 +7,14 @@ Geyser: [https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/](https://
 
 ## 准备
 
-* You must own/manage the server in order to add Floodgate. _If you do not own the server, Floodgate does not allow you to bypass logging into Java servers that require a Mojang Java account_.
-* You must either be running Geyser as a [plugin](https://github.com/GeyserMC/Geyser/wiki/Setup#plugin-setup), or be running [Geyser Standalone](https://github.com/GeyserMC/Geyser/wiki/Setup#Standalone-Setup). Floodgate does not replace Geyser.
-* You should make sure your Geyser is on the latest version (old versions of Geyser that worked with Floodgate 1.0 will not work with Floodgate 2.0)
-* `floodgate-spigot.jar` cannot be installed on CraftBukkit/Bukkit servers.
+* 你必须拥有或者拥有一个服务器的管理权限才能使用 **Floodgate**。_如果你不是该服务器的服主或者管理者，那么 **Floodgate** 是无效的，因为它不会帮助你尝试绕过 **Java版服务器** 的正版验证。_
+* 你必须使用 **Geyser** 的 [插件版](../user-guide/da-jian/#ge-cha-jian-ban-de-da-jian) 或者 [独立版](../user-guide/da-jian/#du-li-ban-de-da-jian)。**Floodgate** 无法取代 **Geyser** 的功能。
+* 你必须保证你正在使用最新版本的 Geyser。（旧版本的 **Geyser** 只和 **Floodgate 1.0** 适配而不支持 **Floodgate 2.0**）
+* `floodgate-spigot.jar` 不能安装到 **CraftBukkit/Bukkit** 服务器上。
 
 ## 搭建
 
-_Any reference to Spigot here also refers to any compatible server software such as Paper._
+_以下提及有关 Spigot 的内容，在类似 Paper 的基于 Spigot 的fork上也通用。_
 
 For BungeeCord/Velocity setups: you only are required to install Floodgate on the BungeeCord or Velocity proxy unless you want to use the Floodgate API on the backend servers - see [below](https://github.com/GeyserMC/Floodgate/wiki/installing-floodgate-also-on-spigot-servers-behind-bungeecord-or-velocity) for the installation process.\
 &#x20;      _Note:_ Installing Floodgate on the backend servers will allow Bedrock player skins to display without the Bedrock player having to switch backend servers.
@@ -26,7 +26,7 @@ For BungeeCord/Velocity setups: you only are required to install Floodgate on th
 * Change the `auth-type` in the Geyser config to `floodgate`.
 * Restart/start up the server.
 
-**ONLY do this step if using Geyser Standalone:**
+**你只需在使用独立版上进行此步骤：**
 
 * _Copy_ the `key.pem` file in the Floodgate config folder to the same directory as Geyser Standalone. **DO NOT DISTRIBUTE THIS KEY TO ANYBODY!** This key is what allows for Bedrock accounts to bypass the Java Edition authentication, and if anyone gets ahold of this, they can wreak havoc on your server.
 
@@ -70,7 +70,7 @@ In your Floodgate config, change `username-prefix` to whichever prefix you desir
 
 On some older Paper servers (or any forks that use them), you may need to also shut down your server and delete your `usercache.json` file located in the same folder as your server jar to prevent users who already joined from having the old prefix. See \[this issue]\(Issues#Prefix-is not-changing-on-the-server-after-changing-it in-the-config.) for more information.
 
-## Obtaining UUIDs for Floodgate players
+## 获取 Floodgate 玩家的 UUID
 
 Check your server logs, or use [this](https://floodgate-uuid.heathmitchell1.repl.co) page. If this doesn't work, then try this method:
 

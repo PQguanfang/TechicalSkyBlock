@@ -1,6 +1,6 @@
 # 功能
 
-## 白名单指令
+### 白名单指令
 
 Floodgate 2.0 has a whitelist command, `fwhitelist`, that should be used for adding or removing Floodgate players to whitelist.json. The username prefix doesn't need to be included. `fwhitelist add Tim203` `fwhitelist remove Tim203`
 
@@ -8,11 +8,11 @@ You can also specify a UUID: `fwhitelist add 00000000-0000-0000-0009-01f64f65c7c
 
 The permission node is `floodgate.command.whitelist`.
 
-### What is the Global Api?
+### 什么是 通用 API?
 
 The Global Api is an API that is available for every server. It currently includes: [Global Linking](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-Global-Linking), [skin uploading](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-skin-uploading), getting a xuid by gamertag, and getting a gamertag by xuid. We don't store anything else than you can access by the Global Api, except for some non-identifiable metrics. The source code of the Global Api is available [here](https://github.com/GeyserMC/global\_api) and the source code of the Global Linking server is available [here](https://github.com/GeyserMC/GlobalLinkServer).
 
-### What is Global Linking?
+### 什么是 通用连接?
 
 Instructions and information about how to link can also be found here: [https://link.geysermc.org/](https://link.geysermc.org)
 
@@ -45,7 +45,7 @@ Once you saved the config and restarted your server you should be using Global L
 
 If you don't want to use Global Linking, you can disable `enable-global-linking` in the Floodgate config.
 
-#### Local Linking
+#### 本地连接
 
 You can also set up a local linking database on your server. Local linking can work with Global Linking at the same time. Link entries in your local database will override entries in the Global Linking Server.
 
@@ -61,7 +61,7 @@ If you have selected `mysql` a new data folder for the database should be genera
 
 That should be it. You can then link your accounts by following the instructions you get when typing `/linkaccount`.
 
-### What is skin uploading?
+### 什么是皮肤上传?
 
 Skins of Bedrock player should be visible to Java players on servers with Floodgate 2.0 installed.\
 If they aren't, it's most likely that the skin uploading queue has grown too large and can take a while to upload your skin.
