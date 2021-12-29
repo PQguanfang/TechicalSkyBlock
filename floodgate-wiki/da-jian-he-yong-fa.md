@@ -54,7 +54,7 @@ _**请注意: 除非您能保证您的玩家没有一个 Java 和 基岩 玩家�
 
 你可以检查服务器日志或者 [这个](https://floodgate-uuid.heathmitchell1.repl.co) 页面以获取。如果这两个办法没用，试试下面这个方法：&#x20;
 
-首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
+首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。如果格式正确，**Java** 版应该可以识别它并作为 **UUID**。
 
 ## 使用 PlaceholderAPI
 
