@@ -16,7 +16,7 @@
 
 有关连接的指引和介绍，可以在这里查看: [https://link.geysermc.org/](https://link.geysermc.org)
 
-在 通用连接 出现以前，您在访问每个拥有 **Floodgate** 的服务器时，必须一个个的手动将自己的 **基岩版和Java版** 账号进行绑定（这里称为连接）。通用连接就是用来解决这个问题的，您只需在这里绑定一次账号，在加入其他启用 **通用连接** 的使用 **Floodgate** 服务器时，将会自动绑定。\
+在 **通用连接** 出现以前，您在访问每个拥有 **Floodgate** 的服务器时，必须一个个的手动将自己的 **基岩版和Java版** 账号进行绑定（这里称为连接）。通用连接就是用来解决这个问题的，您只需在这里绑定一次账号，在加入其他启用 **通用连接** 的使用 **Floodgate** 服务器时，将会自动绑定。\
 通用连接也是 [通用 API](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api) 的一部分，并且使用 **GlobalLinkServer** 来连接您的账号。要连接您的账号，您必须进行以下操作：
 
 1. 同时使用你的 **Java版客户端和基岩版客户端** 加入 **GlobalLinkServer** \
