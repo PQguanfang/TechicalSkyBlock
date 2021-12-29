@@ -118,7 +118,7 @@ GeyserUpdater ([GitHub 页面](https://github.com/YHDiamond/GeyserUpdater)/[Spig
 
 #### 基岩版支持的语言
 
-| Name                         | Code   |
+| 语言名称                         | 代码     |
 | ---------------------------- | ------ |
 | Bulgarian                    | bg\_bg |
 | Czech                        | cs\_cz |
@@ -152,7 +152,7 @@ GeyserUpdater ([GitHub 页面](https://github.com/YHDiamond/GeyserUpdater)/[Spig
 
 #### 额外提供支持的语言：
 
-| Name       | Code   |
+| 语言名称       | 代码     |
 | ---------- | ------ |
 | Afrikaans  | af\_za |
 | Belarusian | be\_by |

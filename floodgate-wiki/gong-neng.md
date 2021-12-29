@@ -2,22 +2,22 @@
 
 ### 白名单指令
 
-Floodgate 2.0 has a whitelist command, `fwhitelist`, that should be used for adding or removing Floodgate players to whitelist.json. The username prefix doesn't need to be included. `fwhitelist add Tim203` `fwhitelist remove Tim203`
+**Floodgate 2.0** 有一个白名单指令， `fwhitelist`，这用来将 **Floodgate** 玩家从 `whitelist.json` 文件中添加或移除，也就是添加或者移除他们的白名单。基岩版玩家的前缀不需要填写，你只需要输入他们的正常名字即可。例如： `fwhitelist add Tim203` `fwhitelist remove Tim203`
 
-You can also specify a UUID: `fwhitelist add 00000000-0000-0000-0009-01f64f65c7c3`
+你也可以通过 UUID 形式使用此指令: `fwhitelist add 00000000-0000-0000-0009-01f64f65c7c3`
 
-The permission node is `floodgate.command.whitelist`.
+这个权限对应的权限节点是 `floodgate.command.whitelist`。
 
 ### 什么是 通用 API?
 
-The Global Api is an API that is available for every server. It currently includes: [Global Linking](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-Global-Linking), [skin uploading](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-skin-uploading), getting a xuid by gamertag, and getting a gamertag by xuid. We don't store anything else than you can access by the Global Api, except for some non-identifiable metrics. The source code of the Global Api is available [here](https://github.com/GeyserMC/global\_api) and the source code of the Global Linking server is available [here](https://github.com/GeyserMC/GlobalLinkServer).
+通用 API 是为每个服务器提供的一个 API。它目前包含：[通用连接](gong-neng.md#shen-me-shi-tong-yong-lian-jie)、[皮肤上传](gong-neng.md#shen-me-shi-pi-fu-shang-chuan)，通过游戏标签获得对于 xuid，通过 xuid 获得对应游戏标签。除了某些不可识别来源的数据外，我们不会通过 通用 API 获取您的任何内容。通用 API 的源代码可以 [在这里查看](https://github.com/GeyserMC/global\_api)，通用连接服务器的源代码可以 [在这里查看](https://github.com/GeyserMC/GlobalLinkServer)。
 
 ### 什么是 通用连接?
 
-Instructions and information about how to link can also be found here: [https://link.geysermc.org/](https://link.geysermc.org)
+有关连接的指引和介绍，可以在这里查看: [https://link.geysermc.org/](https://link.geysermc.org)
 
-Before we introduced Global Linking, you always had to link your Java and Bedrock account on every individual server you visited (that has Floodgate). Global Linking is here to fix that problem. Link once, join everywhere.\
-Global Linking is part of the [Global Api](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api) and uses the GlobalLinkServer to link your account. To be able to link your account you have to do the following:
+在 通用连接 出现以前，您在访问每个拥有 Floodgate 的服务器时，必须一个个的手动将自己的 基岩版和Java版 账号进行绑定。通用连接就是用来解决这个问题的，您只需在这里绑定一次账号，在加入其他启用 通用连接 的 Floodgate 服务器时，将会自动绑定。\
+通用连接也是 [通用 API](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api) 的一部分，并且使用 GlobalLinkServer 来连接您的账号。要连接您的账号，您必须进行以下操作：
 
 1. Join the GlobalLinkServer with both your Java and Bedrock account\
    (IP: `link.geysermc.org`, Java port: `25565`, Bedrock port: `19132`)
@@ -63,11 +63,11 @@ That should be it. You can then link your accounts by following the instructions
 
 ### 什么是皮肤上传?
 
-Skins of Bedrock player should be visible to Java players on servers with Floodgate 2.0 installed.\
-If they aren't, it's most likely that the skin uploading queue has grown too large and can take a while to upload your skin.
+如果你的 **Floodgate 2.0** 被正确安装，那么 **基岩版玩家的皮肤** 对于 **Java版** 玩家来说是可见的。\
+如果没有，那么很有可能你的玩家太多，我们需要一个一个帮你的基岩版玩家的皮肤进行上传，然后展示给 **Java版玩家**，这需要一定的时间，过一会就好了。
 
-Skin uploading is also a part of the [Global Api](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api). It is responsible for converting Bedrock skins to Java skins and uploading them to Mojang servers make them show up on Java Edition.
+皮肤上传也是 [通用API](gong-neng.md#shen-me-shi-tong-yong-api) 的一部分。它的职责是将基岩版的皮肤转换成Java版的皮肤，然后上传到 **Mojang** 的服务器，以使得 **Java版** 玩家可以看到 **基岩版** 玩家的皮肤。
 
-We're using MineSkin internally. MineSkin is running on accounts donated by the community. So if you want to support MineSkin and make the upload times faster, feel free to look at [this page](https://mineskin.org/account) for more info.
+我们当前使用 MineSkin 作为皮肤上传的站点。MineSkin 通过由社区捐赠给他们的正版账号来维持运营。所以你如果想支持 MineSkin 并且想让自己服务器的皮肤上传速度再快一点，请不妨 [查看这个页面](https://mineskin.org/account) 以获取更多信息。
 
-![Example skin uploa](https://camo.githubusercontent.com/7ef276852d8552edfa07a342bfefb6f9ce9a7bffb67c09cef448b65da7dfb915/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3631333136383835303932353634393938312f3831353936393830313736333136303130342f756e6b6e6f776e2e706e67)
+![示例皮肤上传](https://camo.githubusercontent.com/7ef276852d8552edfa07a342bfefb6f9ce9a7bffb67c09cef448b65da7dfb915/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3631333136383835303932353634393938312f3831353936393830313736333136303130342f756e6b6e6f776e2e706e67)
