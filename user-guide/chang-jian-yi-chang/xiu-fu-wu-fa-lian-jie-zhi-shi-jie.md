@@ -66,9 +66,9 @@ Minecraft Java版使用 TCP 进行连接； Minecraft 基岩版使用 UDP。 仅
 
 ### Windows 10
 
-_这只会影响尝试从 Windows 10 版加入 Geyser 且 Geyser 设置在同一台电脑上的人。_
+_这只会影响尝试从 Windows 10 版加入 Geyser 且与 Geyser 服务器在同一台电脑上的人。_
 
-这是由未解除环回限制(Loopback restrictions)引起的问题。 默认情况下，微软应用对其所有本地连接的应用程序都有此限制。 Geyser 将尝试自动解决此问题；但是，如果您仍然遇到连接问题，您可以通过在管理员模式下在 **Windows PowerShell** 中键入以下内容来解除它：（如果正常执行，它应该返回“OK.”）
+这是由未解除环回限制(Loopback restrictions)引起的问题。 默认情况下，微软应用对其所有本地连接的应用程序都有此限制。 **Geyser** 将尝试自动解决此问题；但是，如果您在使用 **Geyser** 时若仍然遇到连接问题，您可以通过在管理员模式下在 **Windows PowerShell** 中输入以下内容来解除它：（如果正常执行，它应该返回“OK.”）
 
 ```
 CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftUWP_8wekyb3d8bbwe"
