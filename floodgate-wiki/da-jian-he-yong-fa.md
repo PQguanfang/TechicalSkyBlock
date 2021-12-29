@@ -7,7 +7,7 @@ Geyser: [https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/](https://
 
 ## 准备
 
-* 你必须拥有一个服务器或者拥有一个服务器的管理权限才能使用 **Floodgate**。_如果你不是该服务器的服主或者管理者，那么 **Floodgate** 是无效的，因为它不会帮助你尝试绕过 **Java版服务器** 的正版验证。_
+* 你必须拥有一个服务器或者拥有一个服务器的管理权限才能使用 **Floodgate**。_如果你不是该服务器的服主或者管理者，那么 **Floodgate** 对你来说是没用的，因为它不会帮助你尝试绕过 **Java版服务器** 的正版验证。_
 * 你必须使用 **Geyser** 的 [插件版](../user-guide/da-jian/#ge-cha-jian-ban-de-da-jian) 或者 [独立版](../user-guide/da-jian/#du-li-ban-de-da-jian)。**Floodgate** 无法取代 **Geyser** 的功能。
 * 你必须保证你正在使用最新版本的 **Geyser**。（旧版本的 **Geyser** 只和 **Floodgate 1.0** 适配而不支持 **Floodgate 2.0**）
 * `floodgate-spigot.jar` 不能安装到 **CraftBukkit/Bukkit** 服务器上。

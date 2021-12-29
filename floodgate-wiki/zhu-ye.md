@@ -6,7 +6,7 @@ Floodgate是一个允许 **Minecraft:基岩版** 帐号加入 **Minecraft:Java�
 
 ## Floodgate 2.0 提供什么?
 
-Floodgate2.0 是 Floodgate1.0 的重写，有各种错误修复和改进。它还引入了新功能：能够 [**在Java版上查看基岩版玩家的皮肤**](gong-neng.md#shen-me-shi-pi-fu-shang-chuan)、使用 **BE Form UI**、[**使用 通用 API**](gong-neng.md#shen-me-shi-tong-yong-api)、[**使用通用连接**](gong-neng.md#shen-me-shi-tong-yong-lian-jie) **** 等。
+Floodgate2.0 是 Floodgate1.0 的重写，有各种错误修复和改进。它还引入了新功能：能够 [**在Java版上查看基岩版玩家的皮肤**](gong-neng.md#shen-me-shi-pi-fu-shang-chuan)、[使用 **BE Form UI**](https://github.com/GeyserMC/Floodgate/wiki/Forms) **** (需额外开发)、[**使用 通用 API**](gong-neng.md#shen-me-shi-tong-yong-api)、[**使用通用连接**](gong-neng.md#shen-me-shi-tong-yong-lian-jie) **** 等。
 
 #### 有关设置说明、功能、Floodgate API等，请参阅右侧边栏。
 
