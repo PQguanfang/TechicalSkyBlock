@@ -6,7 +6,7 @@
 
 ### 运行指令时出错
 
-在某些情况下，例如，如果您将 Floodgate 的配置的 `username-prefix` 选项设置为 `*`，则可能在运行指令时需要将基岩版玩家的用户名用引号括起来；例如：`/tp "*homo114514"`。将基岩版玩家的前缀设置为 `.` 也许能解决这个问题。
+在某些情况下，例如，如果您将 Floodgate 的配置的 `username-prefix` 选项设置为 `*`，则可能在运行指令时需要将基岩版玩家的用户名用引号括起来；例如：`/tp "*homo114514"`。同时，将基岩版玩家的前缀设置为 `.` 也许能解决这个问题。
 
 ### If you wish to use IP forwarding, please enable it in your BungeeCord config as well!
 
