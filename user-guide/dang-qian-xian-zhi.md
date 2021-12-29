@@ -17,12 +17,12 @@
 * 无法查看叠加超过 **6** 种图案的旗帜&#x20;
 * 由于 **Java版** 和 **基岩版** 之间的差异，玩家在竹子周围存在移动问题。下面的插件可解决此问题，但请在使用前阅读 **README**：[https://github.com/Camotoy/BambooCollisionFix](https://github.com/Camotoy/BambooCollisionFix)
 * 自定义铁砧配方
-* 主世界维度最低高度低于 **-64** 或者最高高度高于 **320** 或者在其他维度最低高度低于 **0** 或者最高高度高于 **256**。
+* 主世界维度最低高度低于 **-64** 或者最高高度高于 **320** 、在其他维度最低高度低于 **0** 或者最高高度高于 **256**。
 * 海豚的恩惠视觉效果（药水效果本身可以正常工作）
 * 隐形物品展示框
 * 实体头上的方块（例如盔甲架、玩家）
 
-下面的限制 **可以通过** 使用 [GeyserOptionalPack](https://github.com/GeyserMC/Geyser/wiki/GeyserOptionalPack) 解决，它是一个资源包：
+下面的限制 **可以通过** 使用 [GeyserOptionalPack](https://github.com/GeyserMC/Geyser/wiki/GeyserOptionalPack) 解决，它是一个资源包，为你的基岩版客户端带来额外的一些功能：
 
 * 自定义盔甲架姿势
 * 幻术师
