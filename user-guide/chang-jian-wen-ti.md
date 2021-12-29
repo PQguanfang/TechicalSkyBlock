@@ -72,7 +72,7 @@
 
 ### 在使用 Floodgate 时，我该如何添加基岩版玩家到白名单内？
 
-您可以通过三种方式执行此操作。 第一种方法是使用 Floodgate 的内置白名单命令，`/fwhitelist add .<基岩版玩家>`。 第二种方法是使用 /whitelist off 关闭白名单，然后让基岩版玩家加入，然后运行 `/whitelist add ".<基岩版>"`，然后使用 `/whitelist on` 打开白名单。 ( 如果将这种方法用于关联到现有的、已列入白名单的 Java 帐户的基岩帐户，则无需将基岩帐户也列入白名单；您可以关联帐户然后立即重新打开白名单 ) 第三种方法是添加基岩玩家的 UUID ( 由 Floodgate 提供 ) 添加到 whitelist.json 文件，然后运行 `/whitelist reload`。
+您可以通过三种方式执行此操作。 第一种方法是使用 Floodgate 的内置白名单命令，`/fwhitelist add .<基岩版玩家>`。 第二种方法是执行 `/whitelist off` 关闭白名单，然后让基岩版玩家加入，然后执行 `/whitelist add ".<基岩版玩家>"`指令，最后执行 `/whitelist on` 重新打开白名单。 ( 如果你使用了基岩版和Java版账号连接功能，那么你无需再为基岩版玩家设置白名单，在 Java版 玩家尝试申请连接后，对应的基岩版玩家的游戏ID会被立即给予白名单 ) 第三种方法是添加基岩版玩家的 **UUID** ( 由 Floodgate 生成 ) 添加到 **whitelist.json** 文件，然后执行 `/whitelist reload` 命令。
 
 ### 当使用 Floodgate 时，如何实现在玩家没有加入服务器的情况下查看他们的 UUID？
 
