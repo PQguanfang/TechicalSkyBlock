@@ -22,7 +22,7 @@
 
 ### BungeeCord/Velocity 搭建
 
-如果你正在使用一个 **BungeeCord，Waterfall 或者 Velocity** 代理服务端，那么你只需要将 **Geyser (还有 Floodgate, 如果你需要的话)** 安装到代理服务端上即可，无需在子服上安装。
+如果你正在使用一个 **BungeeCord，Waterfall 或者 Velocity** 代理服务端，那么你只需要将 **Geyser (还有 Floodgate, 如果你需要它的话)** 安装到代理服务端上即可，无需在子服上安装。
 
 你可以在各个子服上安装 **Floodgate (但 Geyser 真的没必要)** 来增强玩家的皮肤显示功能和在子服上使用 **Floodgate API**。如果你要这么做，你 _**必须**_ 保证你将代理服务端内 **Floodgate** 文件夹内的 `key.pem` 文件放置到了 **所有子服的 Floodgate 文件夹内的相同位置**，否则，基岩版客户端无法加入服务器。详细的教程，请查看 [Floodgate Wiki](broken-reference)。
 

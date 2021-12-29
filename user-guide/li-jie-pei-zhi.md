@@ -30,7 +30,7 @@
 
 **`auth-type`**: 登录到 **Minecraft:Java** 版服务器的方式，包括 `online`, `offline`和 `floodgate`。
 
-**请务必注意您的 `auth-type` 选项必须和对应 Java 版服务器保持一致 (除了你的 Java 版服务器是盗版服务器，而你在这里设置为正版)。尝试不用正版登录方式进入正版服务器是行不通的。如果你希望你的正版服务器的基岩版玩家无需使用 Java正版账号 登录，请查看 Floodgate Wiki。**
+**请务必注意您的 `auth-type` 选项必须和对应 Java 版服务器保持一致 (除了你的 Java 版服务器是盗版服务器，而你在这里设置为正版的情况)。尝试不用正版登录方式进入正版服务器是行不通的。如果你希望你的正版服务器的基岩版玩家无需使用 Java正版账号 登录，请查看 Floodgate Wiki。**
 
 **`use-proxy-protocol`**: 是否在连接到服务器时使用 PROXY/HAProxy 协议，这一般在以下情况有用：
 

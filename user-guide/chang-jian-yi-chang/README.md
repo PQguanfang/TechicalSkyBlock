@@ -1,6 +1,6 @@
 # 常见异常
 
-通常，人们在使用 **Geyser** 时会遇到无法连接到服务器类似的错误，这个页面帮助你尝试解决这些异常。如果你仍然没有解决，请不妨加入 [我们的 Discord](https://discord.geysermc.org) 以获得支持。
+通常，用户在使用 **Geyser** 时会遇到无法连接到服务器类似的错误，这个页面帮助你尝试解决这些异常。如果你仍然没有解决，请不妨加入 [我们的 Discord](https://discord.geysermc.org) 以获得支持。
 
 ### Floodgate
 
