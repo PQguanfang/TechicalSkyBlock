@@ -39,27 +39,27 @@ player-link:
   use-global-linking: true
 ```
 
-([see the def](https://github.com/GeyserMC/Floodgate/blob/master/common/src/main/resources/config.yml)点击以查看默认配置)
+([点击以查看默认配置](https://github.com/GeyserMC/Floodgate/blob/master/common/src/main/resources/config.yml))
 
-Once you saved the config and restarted your server you should be using Global Linking.
+一旦你修改并保存了配置，再次重启服务器以后，通用连接应该就能正常工作了。
 
-If you don't want to use Global Linking, you can disable `enable-global-linking` in the Floodgate config.
+如果你不想使用通用连接功能，那么你可以关闭 **Floodgate** 配置内的 `enable-global-linking` 选项。
 
 #### 本地连接
 
-You can also set up a local linking database on your server. Local linking can work with Global Linking at the same time. Link entries in your local database will override entries in the Global Linking Server.
+你也可也在本地设立连接（绑定）数据库。本地连接和通用连接可以同时工作。如果你的玩家使用了本地连接（绑定），那么本地连接的数据将会在你的服务器上覆盖通用连接的数据。
 
-Note that you only have to follow these steps on your proxy (BungeeCord or Velocity), if you have one.
+如果你有代理端 (BungeeCord 或者 Velocity)，那么你只需做以下几个步骤即可：
 
-1. Download one of the linking databases extensions [here](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/). If you need help picking the right one: choose `mysql` if you already have a database or want to have a multi-proxy setup. For anything else choose `sqlite`. The full name should be `floodgate-*type*-database.jar`.
-2. Copy the database extension jar you just downloaded _into_ the floodgate 2.0 plugin folder (e.g. `/plugins/floodgate/`).
-3. Enable `enable-own-linking` in the `player-link` section of Floodgate.
-4. Set `type` in the `player-link` section to your database type (currently either `mysql` or `sqlite`). (If you used Floodgate 1.0 and had linking enabled back then; the database type was `sqlite`).
-5. Restart your server
+1. [从这里](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/) 下载其中一个的数据库拓展。如果你已经有了一个 MySQL 数据库或者想要多个服的连接数据同步，那么请选择 `mysql` 。如果是其他情况，请选择 `sqlite`。完整的数据库拓展文件名称应当是 `floodgate-*类型名称*-database.jar`.
+2. 将下载好的数据库拓展 _放置到_ Floodgate 2.0 的插件文件夹 (例如 `/plugins/floodgate/`)。
+3. 在 Floodgate 配置中启用 `player-link` 下的 `enable-own-linking` 。
+4. 在 Floodgate 配置中启用 `player-link` 下的 `type` 改为你的数据库类型 (当前是 `mysql` 或者 `sqlite`)。 (如果你曾经使用过 Floodgate 1.0 并且启用过玩家连接，那么它的数据库类型肯定是 `sqlite`).
+5. 重启你的服务器。
 
-If you have selected `mysql` a new data folder for the database should be generated inside the Floodgate data folder. You can enter your database credentials in there. After you did that restart your server once more.
+如果你选择了 `mysql` ，一个新的数据库信息将会在 Floodgate 下的 data 文件夹生成。您可以在其中输入您的数据库凭据。在你这样做之后，你需要再次重启你的服务器。
 
-That should be it. You can then link your accounts by following the instructions you get when typing `/linkaccount`.
+如果你做好了，可以通过发送指令 `/linkaccount` 来连接你的两端账号。
 
 ### 什么是皮肤上传?
 

@@ -16,70 +16,50 @@ Geyser: [https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/](https://
 
 _以下提及有关 Spigot 的内容，在类似 Paper 的基于 Spigot 的fork上也通用。_
 
-For BungeeCord/Velocity setups: you only are required to install Floodgate on the BungeeCord or Velocity proxy unless you want to use the Floodgate API on the backend servers - see [below](https://github.com/GeyserMC/Floodgate/wiki/installing-floodgate-also-on-spigot-servers-behind-bungeecord-or-velocity) for the installation process.\
-&#x20;      _Note:_ Installing Floodgate on the backend servers will allow Bedrock player skins to display without the Bedrock player having to switch backend servers.
+对于 **BungeeCord/Velocity**: 你只需要将 **Floodgate** 安装到 **BungeeCord 或者 Velocity** 代理端上，除非你想在子服使用 **Floodgate API** - 具体操作请查看下面的安装步骤\
+&#x20;      _注意:_ 在子服安装 **Floodgate** 将允许基岩版玩家可以直接显示他们的皮肤。
 
-* Download the Floodgate plugin from [here](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/) and add it to your plugins folder on your frontend server.
-  * `floodgate-spigot.jar` for Spigot, Paper, etc
-  * `floodgate-bungee.jar` for BungeeCord, Waterfall, etc
-  * `floodgate-velocity.jar` for Velocity
-* Change the `auth-type` in the Geyser config to `floodgate`.
-* Restart/start up the server.
+* 在 [这里下载](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/) Floodgate 插件并放置到你的服务器的 plugins 文件夹。
+  * `floodgate-spigot.jar` 适配 Spigot, Paper 等等
+  * `floodgate-bungee.jar` 适配 BungeeCord, Waterfall 等等
+  * `floodgate-velocity.jar` 适配 Velocity
+* 将 **Geyser** 配置内的 `auth-type` 选项设置为 `floodgate`。
+* 重启你的服务器。
 
 **你只需在使用独立版上进行此步骤：**
 
-* _Copy_ the `key.pem` file in the Floodgate config folder to the same directory as Geyser Standalone. **DO NOT DISTRIBUTE THIS KEY TO ANYBODY!** This key is what allows for Bedrock accounts to bypass the Java Edition authentication, and if anyone gets ahold of this, they can wreak havoc on your server.
+* _复制_ **Floodgate** 配置所在的目录下的 `key.pem` 文件到 **Geyser独立版** 的文件夹内。**不要尝试将这个文件分享给其他人！**这个密钥文件允许基岩版账号绕过 Java 版身份验证，如果有人拿到了它，他们可能会对您的服务器造成严重破坏。
 
-#### Installing Floodgate also on Spigot servers behind BungeeCord or Velocity
+#### 在 BungeeCord 或者 Velocity 代理端下的每个子服也安装 Floodgate
 
-This is only needed when you want to use the Floodgate API on your Spigot server(s) behind a proxy.
+这只在你想要使用 **Floodgate API** 时需要进行此步骤：
 
-* Install Floodgate on the proxy and on _all_ backend servers as per the [previous insructions](https://github.com/GeyserMC/Floodgate/wiki/Setup-and-Usage#setting-up)
-* Enable `ip_forward` in your BungeeCord `config.yml` if using BungeeCord
-* Set `bungeecord` to `true` in your `spigot.yml`
-* Start the proxy server.
-* Edit the Floodgate config on your proxy server and set `send-floodgate-data` to `true`.
-* _Copy_ the `key.pem` file in the proxy Floodgate config folder to all Spigot servers' Floodgate config folder. **DO NOT DISTRIBUTE THIS KEY TO ANYBODY!** This key is what allows for Bedrock accounts to bypass the Java Edition authentication, and if anyone gets ahold of this, they can wreak havoc on your server.
-* Restart the Spigot servers and proxy server.
-
-## 我如何将 Floodgate 1.0 升级到 Floodgate 2.0？
-
-Floodgate 2.0 is not compatible with Floodgate 1.0 and Floodgate 1.0 is not compatible with Floodgate 2.0, which means there may be some manual upgrading required. When Floodgate 2.0 is loaded for the first time (on your server), it will try to convert the Floodgate 1.0 config to a Floodgate 2.0 config and it will generate a new key (the old one can be found under `old-key.pem`). Floodgate 2.0 uses a different algorithm for the key and because of that, you now only have one key (called `key.pem`) instead of two. You will have to copy the new Floodgate key (like you had to do in the initial startup) to all the servers that use Floodgate, including Geyser-Standalone.\
-
-
-Probably not everyone will understand what has been said, so here is a step-by-step guide:
-
-1. Replace Geyser with the [latest version](https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/) (builds of Geyser that worked with floodgate 1.0, don't work) and replace every server that uses Floodgate with the [latest version](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/).
-2. Restart **one** server that uses Floodgate and let Floodgate update the config and generate a new `key.pem` file.
-3. Look at the Floodgate configuration of that server and check if `config-version` is present in the Floodgate config. If it isn't, you have not installed Floodgate 2.0. While you are there, please decide if you want to continue using the legacy player name prefix `*` or use one of the recommended prefixes: `.` (the new default), `+` or `-`. All those new prefixes are easier to use for commands since you don't have to wrap the player's name in quotes.
-4. Copy the files: `config.yml` and `key.pem` to all your servers that use Floodgate.
-5. If you are using Geyser-Standalone, only copy `key.pem` to the Geyser-Standalone folder.
-6. Make sure that you edit the Geyser config to point to `key.pem` instead of `public-key.pem` (the setting is`floodgate-key-file`).
-7. Restart the other servers and check for errors.
-8. Try to join Geyser with one account to check if everything works as expected. If it doesn't, please make sure that you followed every step correctly. If you did everything correctly and it still doesn't work, join our Discord to get support.
-
-Depending on if you want to keep using [Global Linking](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-Global-Linking), which is enabled by default, you should be ready to go.
-
-To migrate your Floodgate 1.0 local account linking database, follow [these](https://github.com/GeyserMC/Floodgate/wiki/Features#Local-Linking) steps.
+* 在你的 **代理端和** _**所有子服**_ 都安装 Floodgate，相关教程请见上
+* 如果你使用 BungeeCord，启用你的 BungeeCord 的 `config.yml` 内的 `ip_forward` 选项
+* 将 `spigot.yml` 配置内的  `bungeecord` 选项为 `true`&#x20;
+* 开启你的代理服务端
+* 编辑代理服内的 **Floodgate** 配置内的 `send-floodgate-data` 选项为 `true`.
+* _Copy_ the `key.pem` file in the proxy Floodgate config folder to all Spi_复制_ **Floodgate** 配置所在的目录下的 `key.pem` 文件到 **Geyser独立版** 的文件夹内。**不要尝试将这个文件分享给其他人！**这个密钥文件允许基岩版账号绕过 Java 版身份验证，如果有人拿到了它，他们可能会对您的服务器造成严重破坏。
+* 重启子服代理服
 
 ## 修改/关闭基岩版玩家前缀
 
-_**Please note: we do not recommend removing the prefix unless you are certain that no one will share a username between a Java and Bedrock player. Duplicated usernames will cause weird situations, like being unable to teleport to one of the players.**_
+_**请注意: 除非您能保证您的玩家没有一个 Java 和 基岩 玩家同名，否则我们不建议您移除基岩版玩家前缀。Floodgate 给玩家生成 UUID 的规则和Java 版本身不同，即使玩家名称相同，但他们的 UUID 依然不同。因此，重复的玩家名称会导致奇怪的情况，例如你永远无法传送到其中一名玩家。**_
 
-In your Floodgate config, change `username-prefix` to whichever prefix you desire - you can set it to `""` and there will be no prefix.
+在你的 **Floodgate** 配置中，将 `username-prefix` 设置为你需要的前缀 - 你可以设置为 `""` 以关闭基岩版前缀功能。
 
-On some older Paper servers (or any forks that use them), you may need to also shut down your server and delete your `usercache.json` file located in the same folder as your server jar to prevent users who already joined from having the old prefix. See \[this issue]\(Issues#Prefix-is not-changing-on-the-server-after-changing-it in-the-config.) for more information.
+在一些旧版本的 Paper 服务器（或者 Paper 的一些分支），你或许需要关闭你的服务器并删除你的 **服务端 jar** 文件同目录下的的`usercache.json` 文件以避免出现你的老的 **Floodgate** 玩家的前缀没有更新的问题。
 
 ## 获取 Floodgate 玩家的 UUID
 
-Check your server logs, or use [this](https://floodgate-uuid.heathmitchell1.repl.co) page. If this doesn't work, then try this method:
+你可以检查服务器日志或者 [这个](https://floodgate-uuid.heathmitchell1.repl.co) 页面以获取。如果这两个办法没用，试试下面这个方法：&#x20;
 
-First, you'll need to get the XUID of the player. There are several third-party websites to find this, for example, this one (unaffiliated with Geyser). Make sure to choose "Hexidecimal." You'll need to enter the player's Xbox Gamertag, and, once submitted, and it should display the XUID in the format of `xxxxxxxxxxxxxxxx`. To turn the XUID into a UUID that Java Edition can recognize, you need to put the XUID in this format: `00000000-0000-0000-xxxx-xxxxxxxxxxxx`. If formatted right, Java Edition should accept it as a UUID.
+首先，您需要获取基岩玩家的 **XUID**。 有几个第三方网站可以找到这个，例如 [这个](https://cxkes.me/xbox/xuid)（与 Geyser 无关）。确保选择“十六进制”。 您需要输入玩家的 **Xbox** 名，并且一旦提交，它应该以 **xxxxxxxxxxxxxxxx** 的格式显示 **XUID**。 要把XUID变成Java版可以识别的UUID，需要把XUID写成这样的格式：**00000000-0000-0000-xxxx-xxxxxxxxxxxx**。如果格式正确，**Java** 版应该可以接受它作为 **UUID**。
 
 ## 使用 PlaceholderAPI
 
-If you're using the Bukkit version of Floodgate, download the Placeholder plugin [here](https://github.com/rtm516/FloodgatePlaceholders/). Using the placeholders shouldn't require additional setup other than having [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installed. See the section above on installing Floodgate on backend servers if you wish to use this on BungeeCord.
+如果你使用 Floodgate 的 Bukkit 版本，在 [这里 ](https://github.com/rtm516/FloodgatePlaceholders/)下载 **PlaceholderAPI** 插件。 你只需安装好 [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) 插件即可使用 Floodgate 的变量符，无需其他操作。如果你想在 BungeeCord 使用，那么你需要将 Floodgate 安装到所有子服上，具体步骤见上。
 
 ## 使用 Skript
 
-If you're using the Bukkit version of Floodgate, there is an unofficial plugin that adds Skript support [here](https://github.com/Camotoy/floodgate-skript).
+如果你使用 Floodgate 的 Bukkit 版本，这里有一个非官方支持的 Skript 脚本支持 [在这里](https://github.com/Camotoy/floodgate-skript)。
