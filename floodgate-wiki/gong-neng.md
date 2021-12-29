@@ -16,17 +16,17 @@
 
 有关连接的指引和介绍，可以在这里查看: [https://link.geysermc.org/](https://link.geysermc.org)
 
-在 通用连接 出现以前，您在访问每个拥有 Floodgate 的服务器时，必须一个个的手动将自己的 基岩版和Java版 账号进行绑定。通用连接就是用来解决这个问题的，您只需在这里绑定一次账号，在加入其他启用 通用连接 的 Floodgate 服务器时，将会自动绑定。\
-通用连接也是 [通用 API](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api) 的一部分，并且使用 GlobalLinkServer 来连接您的账号。要连接您的账号，您必须进行以下操作：
+在 通用连接 出现以前，您在访问每个拥有 **Floodgate** 的服务器时，必须一个个的手动将自己的 **基岩版和Java版** 账号进行绑定（这里称为连接）。通用连接就是用来解决这个问题的，您只需在这里绑定一次账号，在加入其他启用 **通用连接** 的使用 **Floodgate** 服务器时，将会自动绑定。\
+通用连接也是 [通用 API](https://github.com/GeyserMC/Floodgate/wiki/Features#What-is-the-Global-Api) 的一部分，并且使用 **GlobalLinkServer** 来连接您的账号。要连接您的账号，您必须进行以下操作：
 
-1. Join the GlobalLinkServer with both your Java and Bedrock account\
-   (IP: `link.geysermc.org`, Java port: `25565`, Bedrock port: `19132`)
-2. Start the linking process by typing `/linkaccount` on your Java **or** Bedrock account
-3. You'll get a message with a random number that you have to enter on the account that you did not start the linking process on.
-4. Enter the random number on the other account by typing `/linkaccount <code>`
-5. You should get kicked from the server on both your Bedrock and Java account with the message that it had successfully linked your accounts.
+1. 同时使用你的 **Java版客户端和基岩版客户端** 加入 **GlobalLinkServer** \
+   (IP: `link.geysermc.org`, Java 端口: `25565`, 基岩版端口: `19132`)
+2. 在 Java版 **或者** 基岩版客户端中 输入指令 `/linkaccount` 来开始连接。
+3. 你将会获得需要另外一个没有输入上诉指令的一端需要使用的随机代码。
+4. 在另外一端输入指令`/linkaccount <随机代码>`。
+5. 如果连接成功，你的 **Java版和基岩版** 会被同时踢出服务器。
 
-Global Linking should be enabled by default on every server running Floodgate 2.0, but in the case that you disabled it, you can enable it again by opening your Floodgate config and make sure that the `player-link` section looks similar to this:
+通用连接在每个使用 Floodgate 2.0 的服务器上默认是开启的，但如果你关闭了它，那么你随时可以通过修改 Floodgate 的配置来重新打开它，这时请确保你的 `player-link` 选项像下面这样:
 
 ```
 # Configuration for player linking
@@ -39,7 +39,7 @@ player-link:
   use-global-linking: true
 ```
 
-([see the default config](https://github.com/GeyserMC/Floodgate/blob/master/common/src/main/resources/config.yml))
+([see the def](https://github.com/GeyserMC/Floodgate/blob/master/common/src/main/resources/config.yml)点击以查看默认配置)
 
 Once you saved the config and restarted your server you should be using Global Linking.
 
